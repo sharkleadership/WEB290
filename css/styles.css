@@ -84,9 +84,29 @@ h6 {
   font-family: "Electrolize", "Times New Roman", Times, serif;
 }
 
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.75em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1.25em;
+}
+
 p,
 a {
   font-family: "Ubuntu", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+  color: var(--yellow);
 }
 
 @media (min-width: 32rem) {
