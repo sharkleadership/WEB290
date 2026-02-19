@@ -1,8 +1,17 @@
 /* JM, 02/19/26 */
 
+/* Root styles */
+
 :root {
   font-size: 24px;
   font-size: clamp(1em, calc(1vw + 0.6em), 1.125em);
+
+  --dodgerblue: hsl(210, 100%, 56%);
+  --navy-blue: hsl(251, 52%, 13%);
+  --yellow: hsl(58, 73%, 62%);
+  --orange: hsl(17, 100%, 68%);
+  --red: hsl(1, 82%, 66%);
+
   /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
   box-sizing: border-box;
   /* line-height: 1.4; */
@@ -21,11 +30,6 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
 }
-
-/* p,
-figcaption {
-  max-width: 80ch;
-} */
 
 /* Double container */
 
@@ -50,6 +54,8 @@ main > * {
   width: 100%;
 }
 
+/* General selectors */
+
 /* main .full-bleed {
   padding-left: 3.75vw;
   padding-right: 3.75vw;
@@ -63,6 +69,25 @@ main > aside {
     margin-top: 0;
   }
 } */
+
+/* p,
+figcaption {
+  max-width: 80ch;
+} */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Electrolize", "Times New Roman", Times, serif;
+}
+
+p,
+a {
+  font-family: "Ubuntu", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
 
 @media (min-width: 32rem) {
 }
