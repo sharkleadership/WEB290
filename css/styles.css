@@ -1,10 +1,20 @@
 /* JM, 02/19/26 */
 
+@font-face {
+  font-family: "Corporate-Logo-Rounded-Bold";
+  src:
+    url("../assets/Corporate-Logo-Rounded-Bold-ver3.woff2") format("woff2"),
+    url("../assets/Corporate-Logo-Rounded-Bold-ver3.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Root styles */
 
 :root {
   font-size: 24px;
-  font-size: clamp(1em, calc(1vw + 0.6em), 1.125em);
+  font-size: clamp(1rem, calc(1vw + 0.6rem), 1.125rem);
 
   --dodgerblue: hsl(210, 100%, 56%);
   --navy-blue: hsl(251, 52%, 13%);
@@ -12,7 +22,6 @@
   --orange: hsl(17, 100%, 68%);
   --red: hsl(1, 82%, 66%);
 
-  /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
   box-sizing: border-box;
   /* line-height: 1.4; */
 }
@@ -107,6 +116,14 @@ a {
 
 a {
   color: var(--yellow);
+}
+
+/* Class styles */
+
+.salutation .japanese {
+  font-family:
+    "Corporate-Logo-Rounded-Bold", "ヒラギノ角ゴ Pro W3",
+    "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, sans-serif;
 }
 
 @media (min-width: 32rem) {
