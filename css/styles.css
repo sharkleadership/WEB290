@@ -1,10 +1,11 @@
-/* JM, 02/19/26 */
+/* JM, 03/04/26 */
 
 @font-face {
   font-family: "Corporate-Logo-Rounded-Bold";
   src:
-    url("../assets/Corporate-Logo-Rounded-Bold-ver3.woff2") format("woff2"),
-    url("../assets/Corporate-Logo-Rounded-Bold-ver3.woff") format("woff");
+    url("../assets/fonts/Corporate-Logo-Rounded-Bold-ver3.woff2")
+      format("woff2"),
+    url("../assets/fonts/Corporate-Logo-Rounded-Bold-ver3.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -13,9 +14,8 @@
 /* Root styles */
 
 :root {
-  font-size: 24px;
-  font-size: clamp(1rem, calc(1vw + 0.6rem), 1.125rem);
-
+  font-size: 18pt;
+  font-size: clamp(18pt, calc(1vw + (0.6 * 18pt)), calc(1.125 * 18pt));
   --dodgerblue: hsl(210, 100%, 56%);
   --navy-blue: hsl(251, 52%, 13%);
   --yellow: hsl(58, 73%, 62%);
@@ -118,6 +118,10 @@ a {
   color: var(--yellow);
 }
 
+img {
+  max-width: 100%;
+}
+
 /* Class styles */
 
 .salutation .japanese {
@@ -126,9 +130,38 @@ a {
     "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, sans-serif;
 }
 
-@media (min-width: 32rem) {
+/* Projects */
+
+.projects__card {
+  overflow: hidden;
+  aspect-ratio: 9 / 16;
+
+  & .projects__picture {
+    aspect-ratio: 9 / 16;
+    object-fit: contain;
+    object-position: 0% 0%;
+  }
 }
 
-@media (min-width: 48rem) {
-  /* maybe? */
+@media (min-width: 32em) {
+  .projects__card {
+    aspect-ratio: 4 / 3;
+
+    & .projects__picture {
+      aspect-ratio: 4 / 3;
+    }
+  }
+}
+
+@media (min-width: 42em) {
+  .projects__card {
+    aspect-ratio: 16 / 9;
+
+    & .projects__picture {
+      aspect-ratio: 16 / 9;
+    }
+  }
+}
+
+@media (min-width: 60em) {
 }

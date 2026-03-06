@@ -9,7 +9,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Electrolize&family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-        <link rel="preload" href="./assets/Corporate-Logo-Rounded-Bold-ver3.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="./assets/fonts/Corporate-Logo-Rounded-Bold-ver3.woff2" as="font" type="font/woff2" crossorigin>
 
         <link rel="stylesheet" href="./css/styles.css">
         <script src="./js/scripts.js" defer></script>
@@ -29,6 +29,7 @@
             </header>
             <main>
                 <section id="hero" class="hero">
+                    <img src="./assets/images/3d model.png" alt='"3D" Model'> <!-- PLACEHOLDER: 3D model of head with mask with lettermark -->
                     <h1>
                         <span class="salutation">
                             <span class="japanese" lang="ja">
@@ -41,9 +42,9 @@
                         </span>
                         I am <span>&lt;JM&gt; <!-- PLACEHOLDER: <JM> LOGO--></span>, a web developer
                     </h1>
-                    <img src="" alt=""> <!-- PLACEHOLDER: 3D model of head with mask with lettermark -->
                 </section>
                 <section id="about" class="about">
+                    <h2>About Me</h2>
                     <p>
                         Hello, I am <span>&lt;JM&gt; <!-- PLACEHOLDER: <JM> LOGO--></span>. I started programming at a young age, inspired in part by Flash (may it rest in peace) and HTML5 games.
                     </p>
@@ -56,11 +57,18 @@
                     </p>
                 </section>
                 <section id="projects" class="projects">
+                    <h2>Projects</h2>
                     <ul>
                         <li>
-                            <details>
+                            <details class="projects__card">
                                 <summary>
-                                    <img src="" alt="" srcset="">
+                                    <picture>
+                                        <source srcset="./assets/images/projects/languagebox_DesktopXL.png" media="(width >= 64em)" height="3730" width="2880">
+                                        <source srcset="./assets/images/projects/languagebox_Desktop.png" media="(width >= 48em)" height="3388" width="2048">
+                                        <source srcset="./assets/images/projects/languagebox_Tablet.png" media="(width >= 32em)" height="6840" width="1536">
+                                        <source srcset="./assets/images/projects/languagebox_Mobile.png" media="(width < 32em)" height="5580" width="896">
+                                        <img class="projects__picture" src="./assets/images/projects/languagebox_Mobile.png" alt="Example of the website LanguageBox." height="5580" width="896">
+                                    </picture>
                                     <h3>LanguageBox</h3>
                                 </summary>
                                 <p>
@@ -71,7 +79,13 @@
                         <li>
                             <details>
                                 <summary>
-                                    <img src="" alt="" srcset="">
+                                    <picture>
+                                        <source srcset="./assets/images/projects/" media="" height="" width="">
+                                        <source srcset="./assets/images/projects/" media="" height="" width="">
+                                        <source srcset="./assets/images/projects/" media="" height="" width="">
+                                        <source srcset="./assets/images/projects/" media="" height="" width="">
+                                        <img src="./assets/images/projects/" alt="" height="" width="">
+                                    </picture> <!-- NOSCRIPT: Image -->
                                     <h3>jeremymeyers.dev</h3>
                                 </summary>
                                 <p>
@@ -82,7 +96,13 @@
                         <li>
                             <details>
                                 <summary>
-                                    <img src="" alt="" srcset="">
+                                    <picture>
+                                        <source srcset="./assets/images/projects/" media="" height="" width="">
+                                        <source srcset="./assets/images/projects/" media="" height="" width="">
+                                        <source srcset="./assets/images/projects/" media="" height="" width="">
+                                        <source srcset="./assets/images/projects/" media="" height="" width="">
+                                        <img src="./assets/images/projects/" alt="" height="" width="">
+                                    </picture>
                                     <h3>Kansas City Doberman Rescue</h3>
                                 </summary>
                                 <p>
@@ -92,12 +112,13 @@
                         </li>
                     </ul>
                     <section class="other-projects">
+                        <h3>Other Projects</h3>
                         <ul>
                             <li>
                                 <img src="" alt="" srcset="">
                                 <details>
                                     <summary>
-                                        <h3>CSS Paged Media</h3>
+                                        <h4>CSS Paged Media</h4>
                                     </summary>
                                     <p>
                                         CSS Paged Media is a one-page website that details the CSS Paged Media module. Other related features such as page counters and fragmentation are also discussed. This project was created as my midterm project in WEB 122 – CSS Techniques and Projects.
@@ -108,7 +129,7 @@
                                 <img src="" alt="" srcset="">
                                 <details>
                                     <summary>
-                                        <h3>RPSLS</h3>
+                                        <h4>RPSLS</h4>
                                     </summary>
                                     <p>
                                         RPSLS is a JavaScript game extension of the popular game Rock, Paper, Scissors. This project was created as my final project for WEB 114 – JavaScript I.
@@ -119,7 +140,7 @@
                                 <img src="" alt="" srcset="">
                                 <details>
                                     <summary>
-                                        <h3>Portal: The Movie</h3>
+                                        <h4>Portal: The Movie</h4>
                                     </summary>
                                     <p>
                                         Portal: The Movie is a high-fidelity Figma prototype of a promotional website for a &lpar;currently&rpar; fictional movie. This project was created as my final project for WEB 126 – Technical Interface Skills.
