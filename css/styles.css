@@ -129,13 +129,51 @@ img {
 /* Header */
 
 .header {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: right;
 }
 
 .header .JM-logo svg {
-  width: 6em;
-  height: 6em;
+  width: 5em;
+}
+
+/* Hamburger Navigation */
+nav {
+  position: relative;
+}
+
+input.hamburger {
+  display: none;
+}
+
+menu {
+  opacity: 0;
+}
+
+.hamburger:checked ~ menu {
+  opacity: 1;
+}
+
+.hamburger__button .bar {
+  border-bottom: 0.125em solid var(--white);
+}
+
+.hamburger__button .bar ~ .bar {
+  margin-top: 0.4em;
+}
+
+.hamburger__button {
+  padding: 0.5em;
+  width: 2.4em;
+  height: 2.4em;
+  aspect-ratio: 1;
+  border: 0.125em solid var(--white);
+  border-radius: 0.5em;
+}
+
+menu {
+  position: absolute;
 }
 
 /* Hero */
@@ -147,7 +185,8 @@ img {
 }
 
 .hero .JM-logo svg {
-  /* width:; */
+  max-width: 3em;
+  vertical-align: middle;
 }
 
 /* Projects */
@@ -165,41 +204,53 @@ img {
 
 /* JM tag logo animation */
 
-.JM-logo {
-  svg {
-    object-fit: cover;
-    aspect-ratio: 1 / 0.5;
-  }
+.JM-logo svg {
+  display: inline-block;
+  object-fit: cover;
+  aspect-ratio: 1 / 0.5;
+  height: auto;
+}
 
-  & path {
-    stroke-dasharray: 15;
-    stroke-dashoffset: 15;
-  }
+.JM-logo path {
+  stroke-dasharray: 1050;
+  stroke-dashoffset: 1050;
+}
 
-  & .JM-logo__j,
-  & .JM-logo__m {
-    animation: JM-logo 1.5s forwards ease-out;
-    /* animation-play-state: paused; */
-  }
+.JM-logo__j,
+.JM-logo__m {
+  animation: JM-logo 1.5s forwards ease-out;
+  /* animation-play-state: paused; */
+}
 
-  & .JM-logo__m {
-    animation-delay: 0.4625s;
-  }
+.JM-logo__m {
+  animation-delay: 0.4625s;
+}
 
-  & .JM-logo__m-tail {
-    animation: JM-logo 100ms both;
-    animation-delay: 1.325s;
-    /* animation-play-state: paused; */
-  }
+.JM-logo__m-tail {
+  animation: JM-logo 100ms both;
+  animation-delay: 1.325s;
+  /* animation-play-state: paused; */
 }
 
 @keyframes JM-logo {
   from {
-    stroke-dashoffset: 15;
+    /* stroke-dashoffset: 600; */
   }
   to {
     stroke-dashoffset: 0;
   }
+}
+
+/* Footer */
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer .JM-logo svg {
+  width: 6em;
+  height: 6em;
 }
 
 @media (min-width: 32em) {
