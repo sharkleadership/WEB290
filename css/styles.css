@@ -21,6 +21,7 @@
   --yellow: hsl(58, 73%, 62%);
   --orange: hsl(17, 100%, 68%);
   --red: hsl(1, 82%, 66%);
+  --white: hsl(240, 9%, 90%);
 
   box-sizing: border-box;
   /* line-height: 1.4; */
@@ -46,6 +47,9 @@ body {
   max-width: 100%;
   display: grid;
   grid-template-columns: [left] auto [content] 1fr auto [right];
+
+  background-color: var(--navy-blue);
+  color: var(--white);
 }
 
 main {
@@ -122,12 +126,28 @@ img {
   max-width: 100%;
 }
 
-/* Class styles */
+/* Header */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header .JM-logo svg {
+  width: 6em;
+  height: 6em;
+}
+
+/* Hero */
 
 .salutation .japanese {
   font-family:
     "Corporate-Logo-Rounded-Bold", "ヒラギノ角ゴ Pro W3",
     "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, sans-serif;
+}
+
+.hero .JM-logo svg {
+  /* width:; */
 }
 
 /* Projects */
@@ -140,6 +160,45 @@ img {
     aspect-ratio: 9 / 16;
     object-fit: contain;
     object-position: 0% 0%;
+  }
+}
+
+/* JM tag logo animation */
+
+.JM-logo {
+  svg {
+    object-fit: cover;
+    aspect-ratio: 1 / 0.5;
+  }
+
+  & path {
+    stroke-dasharray: 15;
+    stroke-dashoffset: 15;
+  }
+
+  & .JM-logo__j,
+  & .JM-logo__m {
+    animation: JM-logo 1.5s forwards ease-out;
+    /* animation-play-state: paused; */
+  }
+
+  & .JM-logo__m {
+    animation-delay: 0.4625s;
+  }
+
+  & .JM-logo__m-tail {
+    animation: JM-logo 100ms both;
+    animation-delay: 1.325s;
+    /* animation-play-state: paused; */
+  }
+}
+
+@keyframes JM-logo {
+  from {
+    stroke-dashoffset: 15;
+  }
+  to {
+    stroke-dashoffset: 0;
   }
 }
 
