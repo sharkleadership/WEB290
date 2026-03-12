@@ -1,4 +1,4 @@
-/* JM, 03/04/26 */
+/* JM, 03/11/26 */
 
 @font-face {
   font-family: "Corporate-Logo-Rounded-Bold";
@@ -272,6 +272,10 @@ menu li > a:visited {
 }
 
 /* Hero */
+
+h2 {
+  text-align: center;
+}
 
 .salutation .japanese {
   font-family:

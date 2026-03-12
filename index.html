@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- JM, 03/04/2026 -->
+<!-- JM, 03/11/2026 -->
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -79,9 +79,9 @@
                     <h2>
                         <span class="salutation">
                             <span class="japanese" lang="ja">
-                                <span>おはようございます！</span>
-                                <span>こんにちは！</span>
-                                <span>こんばんは！</span>
+                                <span class="morning">おはようございます！</span>
+                                <span class="afternoon">こんにちは！</span>
+                                <span class="evening">こんばんは！</span>
                             </span>
                             <span>Hello!</span>
                             <span>toki a!</span>
@@ -128,9 +128,45 @@
                 <section id="about" class="about">
                     <h2>About Me</h2>
                     <p>
-                        Hello, I am <span>&lt;JM&gt; <!-- PLACEHOLDER: <JM> LOGO--></span>. I started programming at a young age, inspired in part by Flash (may it rest in peace) and HTML5 games.
+                        Hello, I am <span class="JM-logo" title="<JM>"><svg
+                                viewBox="0 0 67.733329 20.720588"
+                                version="1.1"
+                                id="JM-logo"
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns:svg="http://www.w3.org/2000/svg">
+                                <g
+                                    id="jm"
+                                    class="JM-logo__jm-group"
+                                    transform="matrix(0.09170011,0,0,0.09170313,-1.3426703,-13.027762)">
+                                    <path
+                                    style="fill:none;stroke:#1e90ff;stroke-width:32.6422;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:normal"
+                                    d="m 294.51542,198.82659 c 57.75099,60.67636 -11.33134,218.87243 -108.91981,114.48594"
+                                    id="j"
+                                    class="JM-logo__j" />
+                                    <path
+                                    style="display:inline;fill:none;stroke:#1e90ff;stroke-width:32.6111;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:fill markers stroke"
+                                    d="m 170.47387,211.35078 c 63.60558,-4.66523 147.90373,-43.13442 222.04248,-52.86148 17.67003,-1.51476 19.84077,8.54425 20.47473,14.64474 -2.33237,15.89532 -45.81636,65.29105 -55.78886,86.49105 25.7831,-15.05333 79.32976,-72.26693 121.58501,-72.92684 0.28109,14.2211 -14.3575,58.96575 5.04779,62.14087 48.7994,-3.72238 118.17024,-24.07337 111.74624,9.77557 l -21.97146,93.09728"
+                                    id="m"
+                                    class="JM-logo__m" />
+                                    <path
+                                    style="fill:none;fill-rule:evenodd;stroke:#1e90ff;stroke-width:6.47914;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;paint-order:fill markers stroke"
+                                    d="m 570.09582,355.59595 c 29.53052,-0.84352 36.54359,-7.04816 52.53635,-11.11486 -36.10936,19.30926 -63.26858,28.34777 -52.53635,11.11486 z"
+                                    id="m-tail"
+                                    class="JM-logo__m-tail" />
+                                </g>
+                                <path
+                                    style="fill:none;stroke:#ffffff;stroke-width:2.71801;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                                    d="M 10.124659,3.2366662 C 7.2729045,5.5425664 4.9996936,7.9702664 1.3588815,10.110051 c 2.901212,1.863808 3.9699434,2.916214 6.5220952,4.998185 0.3055824,0.249287 1.8691856,1.502017 2.0815626,2.143992"
+                                    id="lt"
+                                    class="JM-logo__lt" />
+                                <path
+                                    style="display:inline;fill:none;stroke:#ffffff;stroke-width:2.71801;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                                    d="m 57.938471,3.2348672 c 3.125037,1.9370882 5.222618,4.7827552 8.43598,6.8733838 -3.213326,2.061802 -5.63678,4.574962 -8.43598,6.87341"
+                                    id="gt"
+                                    class="JM-logo__gt" />
+                            </svg></span>. I started programming at a young age, inspired in part by Flash (may it rest in peace) and HTML5 games.
                     </p>
-                    <img src="" alt=""> <!-- PLACEHOLDER: Spinning Rubik's Cube 3D Model?/GIF -->
+                    <img src="./assets/images/rubiks-cube.png" alt="Photo of a Rubik's Cube."> <!-- PLACEHOLDER: Spinning Rubik's Cube 3D Model?/GIF -->
                     <p>
                         As I grew, I continued learning and creating projects using basic HTML and JavaScript. Fast forward to the present, I am a student of Web Development & Digital Media!
                     </p> 
@@ -153,13 +189,14 @@
                                     </picture>
                                     <h3>LanguageBox</h3>
                                 </summary>
+                                <img src="./assets/images/projects/languagebox-logo.png" alt="LanguageBox logo." class="project-logo--languagebox">
                                 <p>
                                     LanguageBox is a blog/learning resource dedicated to toki pona, the language of good. toki pona is a constructed language created in 2001 by Sonja Lang, known within the community as jan Sonja. This project's goal was to create a WordPress website on a topic of my choosing. The website needed to offer at least four pages and four posts of content. This project was created as my final project in WEB 172 - WordPress I.
                                 </p>
                             </details>
                         </li>
                         <li>
-                            <details>
+                            <details class="projects__card">
                                 <summary>
                                     <picture>
                                         <source srcset="./assets/images/projects/" media="" height="" width="">
@@ -170,23 +207,25 @@
                                     </picture> <!-- NOSCRIPT: Image -->
                                     <h3>jeremymeyers.dev</h3>
                                 </summary>
+                                <img src="./assets/images/JM-tag-logo.svg" alt="<JM> logo." class="project-logo--JM">
                                 <p>
                                     jeremymeyers.dev, affectionately called &lpar;by me&rpar; JMDev, is my portfolio, and coincidentally, the website you are on currently! Originally hobbled together over the course of my scholarship, JMDev has now been redesigned as part of a project for my capstone class &lparWEB 290&rpar;.
                                 </p>
                             </details>
                         </li>
                         <li>
-                            <details>
+                            <details class="projects__card">
                                 <summary>
                                     <picture>
-                                        <source srcset="./assets/images/projects/" media="" height="" width="">
-                                        <source srcset="./assets/images/projects/" media="" height="" width="">
-                                        <source srcset="./assets/images/projects/" media="" height="" width="">
-                                        <source srcset="./assets/images/projects/" media="" height="" width="">
-                                        <img src="./assets/images/projects/" alt="" height="" width="">
+                                        <source srcset="./assets/images/projects/KCDR_DesktopXL.png" media="(width >= 64em)" height="3730" width="2880">
+                                        <source srcset="./assets/images/projects/KCDR_Desktop.png" media="(width >= 48em)" height="3388" width="2048">
+                                        <source srcset="./assets/images/projects/KCDR_Tablet.png" media="(width >= 32em)" height="6840" width="1536">
+                                        <source srcset="./assets/images/projects/KCDR_Mobile.png" media="(width < 32em)" height="5580" width="896">
+                                        <img class="projects__picture" src="./assets/images/projects/KCDR_Mobile.png" alt="Example of my redesign of the website for the Kansas City Doberman Rescue." height="5580" width="896">
                                     </picture>
                                     <h3>Kansas City Doberman Rescue</h3>
                                 </summary>
+                                <img src="./assets/images/projects/KCDR-logo.svg" alt="Kansas City Doberman Rescue redesigned logo." class="project-logo--KCDR">
                                 <p>
                                     Kansas City Doberman Rescue is a volunteer organization that rescues Dobermans. I redesigned their website to fix some of its challenges, focusing on its disjointed styles, outdated code, and content fatigue. This project was created as my final project in WEB 122 – CSS Techniques and Projects.
                                 </p>
@@ -197,7 +236,7 @@
                         <h3>Other Projects</h3>
                         <ul>
                             <li>
-                                <img src="" alt="" srcset="">
+                                <img src="./assets/images/projects/css-paged-media-logo.png" alt="CSS Paged Media logo." class="other-project-logo--CSSPM">
                                 <details>
                                     <summary>
                                         <h4>CSS Paged Media</h4>
@@ -208,7 +247,7 @@
                                 </details>
                             </li>
                             <li>
-                                <img src="" alt="" srcset="">
+                                <img src="./assets/images/projects/RPSLS-logo.svg" alt="Rock, Paper, Scissors, Lizard, Spock logo." class="other-project-logo--RPSLS">
                                 <details>
                                     <summary>
                                         <h4>RPSLS</h4>
@@ -219,7 +258,7 @@
                                 </details>
                             </li>
                             <li>
-                                <img src="" alt="" srcset="">
+                                <img src="./assets/images/projects/Portal-The-Movie-logo.png" alt="Portal: The Movie unofficial logo." class="other-project-logo--portal">
                                 <details>
                                     <summary>
                                         <h4>Portal: The Movie</h4>
