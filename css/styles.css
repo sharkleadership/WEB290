@@ -24,7 +24,7 @@
   --white: hsl(240, 9%, 90%);
 
   box-sizing: border-box;
-  /* line-height: 1.4; */
+  line-height: 1.4;
 }
 
 *,
@@ -277,10 +277,55 @@ h2 {
   text-align: center;
 }
 
-.salutation .japanese {
+/* Salutation */
+
+.salutation__window {
+  display: block;
+  grid-template-columns: 1fr;
+  max-height: calc(1em * 1.4);
+
+  overflow: hidden;
+}
+
+.salutation__glass {
+  display: block;
+  animation: greeting-carousel 10s ease-in-out infinite;
+}
+
+.salutation__glass span {
+  display: block;
+}
+
+.salutation__window .japanese {
   font-family:
     "Corporate-Logo-Rounded-Bold", "ヒラギノ角ゴ Pro W3",
     "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, sans-serif;
+}
+
+.salutation__window .japanese span {
+  display: none;
+}
+
+.salutation__window .japanese .time {
+  display: block;
+}
+
+@keyframes greeting-carousel {
+  0% {
+    transform: translateY(0%);
+  }
+  24%,
+  37% {
+    transform: translateY(-22%);
+  }
+  54%,
+  67% {
+    transform: translateY(-50%);
+  }
+  84%,
+  100% {
+    transform: translateY(-75%);
+  }
 }
 
 .hero .JM-logo svg {
