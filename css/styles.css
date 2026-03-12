@@ -47,6 +47,7 @@ body {
   max-width: 100%;
   display: grid;
   grid-template-columns: [left] auto [content] 1fr auto [right];
+  overflow-y: hidden;
 
   background-color: var(--navy-blue);
   color: var(--white);
@@ -131,7 +132,10 @@ img {
 .header {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  justify-items: right;
+  align-items: center;
+  background-color: var(--navy-blue);
+  position: sticky;
+  top: 0;
 }
 
 .header .JM-logo svg {
@@ -139,8 +143,10 @@ img {
 }
 
 /* Hamburger Navigation */
+
 nav {
   position: relative;
+  justify-self: right;
 }
 
 input.hamburger {
@@ -149,18 +155,47 @@ input.hamburger {
 
 menu {
   opacity: 0;
+
+  position: absolute;
+  right: 0;
+
+  list-style-type: none;
+  line-height: 2;
+  padding: 1em 1em 1em 1.5em;
+  margin: 0;
+  border-radius: 1.5em 0 0 1.5em;
+
+  transform: translateX(10em);
+  transition:
+    transform 300ms ease-out,
+    opacity 100ms;
+}
+
+menu::after {
+  content: "";
+  display: block;
+  width: 150%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  transform: translateX(10em);
+  transition: transform 400ms;
+  transition-delay: 400ms;
+  transition-timing-function: cubic-bezier(0.23, 0.395, 0.58, 1.23);
+
+  background-color: var(--yellow);
+  box-shadow: 0 0 0.2em 0.05em var(--yellow);
+  border-radius: 1em 0 0 1em;
 }
 
 .hamburger:checked ~ menu {
   opacity: 1;
+  transform: translateX(0);
 }
 
-.hamburger__button .bar {
-  border-bottom: 0.125em solid var(--white);
-}
-
-.hamburger__button .bar ~ .bar {
-  margin-top: 0.4em;
+.hamburger:checked ~ menu::after {
+  transform: translateX(0);
 }
 
 .hamburger__button {
@@ -168,12 +203,72 @@ menu {
   width: 2.4em;
   height: 2.4em;
   aspect-ratio: 1;
-  border: 0.125em solid var(--white);
-  border-radius: 0.5em;
+  position: relative;
+  z-index: 100;
 }
 
-menu {
+.hamburger__button::after {
+  content: "";
+  display: block;
+  width: 150%;
+  height: 100%;
   position: absolute;
+  z-index: -1;
+  inset: 0;
+  transform: translateX(3em);
+  transition: transform 400ms;
+  transition-delay: 400ms;
+  transition-timing-function: cubic-bezier(0.23, 0.395, 0.58, 1.23);
+
+  background-color: var(--yellow);
+  box-shadow: 0 0 0.2em 0.05em var(--yellow);
+  border-radius: 0.5em 0 0;
+}
+
+.hamburger:checked + label .hamburger__button::after {
+  transform: translateX(0);
+}
+
+/* Buns */
+
+.hamburger__button .bar {
+  border-bottom: 0.125em solid var(--white);
+  transition:
+    transform 200ms ease-out,
+    opacity 100ms,
+    border-color 100ms 500ms;
+}
+
+.hamburger__button .bar ~ .bar {
+  margin-top: 0.4em;
+}
+
+.hamburger:checked + label .bar {
+  border-color: var(--navy-blue);
+}
+
+.hamburger:checked + label .bar--top {
+  transform: scale(1.1) translateY(0.55em) rotate(45deg);
+}
+
+.hamburger:checked + label .bar--middle {
+  transform: translateX(5em);
+  opacity: 0;
+}
+
+.hamburger:checked + label .bar--bottom {
+  transform: scale(1.1) translateY(-0.35em) rotate(-45deg);
+}
+
+menu li > a,
+menu li > a:link,
+menu li > a:visited {
+  color: var(--yellow);
+  transition: color 200ms 400ms;
+}
+
+.hamburger:checked ~ menu li > a {
+  color: var(--navy-blue);
 }
 
 /* Hero */
@@ -222,19 +317,23 @@ menu {
   /* animation-play-state: paused; */
 }
 
+.JM-logo__j {
+  animation-delay: 1s;
+}
+
 .JM-logo__m {
-  animation-delay: 0.4625s;
+  animation-delay: 1.4625s;
 }
 
 .JM-logo__m-tail {
   animation: JM-logo 100ms both;
-  animation-delay: 1.325s;
+  animation-delay: 2.325s;
   /* animation-play-state: paused; */
 }
 
 @keyframes JM-logo {
   from {
-    /* stroke-dashoffset: 600; */
+    stroke-dashoffset: 1050;
   }
   to {
     stroke-dashoffset: 0;
@@ -244,13 +343,22 @@ menu {
 /* Footer */
 
 .footer {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  background-color: var(--navy-blue);
 }
 
 .footer .JM-logo svg {
-  width: 6em;
-  height: 6em;
+  width: 5em;
+}
+
+.footer menu {
+  bottom: 2.4em;
+}
+
+.footer .hamburger__button::after {
+  border-radius: 0 0 0 0.5em;
 }
 
 @media (min-width: 32em) {
