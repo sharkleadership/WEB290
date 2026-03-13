@@ -38,16 +38,14 @@ body {
   margin: 0;
   padding: 0;
   max-width: 100vw;
-  overflow-x: hidden;
 }
 
 /* Double container */
 
-#wrapper {
+.wrapper {
   max-width: 100%;
   display: grid;
   grid-template-columns: [left] auto [content] 1fr auto [right];
-  overflow-y: hidden;
 
   background-color: var(--navy-blue);
   color: var(--white);
@@ -58,7 +56,7 @@ main {
   grid-template-columns: [left] 1fr [content] 92.5vw 1fr [right];
 }
 
-#wrapper > *,
+.wrapper > *,
 main > * {
   grid-column: content;
 }
@@ -96,6 +94,8 @@ h4,
 h5,
 h6 {
   font-family: "Electrolize", "Times New Roman", Times, serif;
+  margin: 0;
+  text-align: center;
 }
 
 h1 {
@@ -134,12 +134,14 @@ img {
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   background-color: var(--navy-blue);
+
   position: sticky;
+  z-index: 1000;
   top: 0;
 }
 
 .header .JM-logo svg {
-  width: 5em;
+  width: 5rem;
 }
 
 /* Hamburger Navigation */
@@ -273,8 +275,21 @@ menu li > a:visited {
 
 /* Hero */
 
-h2 {
-  text-align: center;
+.hero h2 {
+  margin: 2em 0 0;
+}
+
+.hero {
+  position: relative;
+  padding: 4rem 0;
+}
+
+.three-d-face {
+  position: absolute;
+  top: 2rem;
+  left: calc(50% - 2.5em);
+
+  max-width: 5em;
 }
 
 /* Salutation */
@@ -333,9 +348,40 @@ h2 {
   vertical-align: middle;
 }
 
+/* About */
+
+.about .JM-logo svg {
+  max-width: 3em;
+  vertical-align: middle;
+}
+
 /* Projects */
 
+.projects ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.projects__button {
+  display: block;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
 .projects__card {
+  margin: 0;
+  position: relative;
+}
+
+.projects__card h3 {
+  position: absolute;
+  top: 0;
+}
+
+.picture-container {
   overflow: hidden;
   aspect-ratio: 9 / 16;
 
@@ -344,6 +390,16 @@ h2 {
     object-fit: contain;
     object-position: 0% 0%;
   }
+}
+
+.projects__desc .projects__picture {
+  max-width: 90vw;
+}
+
+.projects__desc [class*="project-logo"] {
+  max-width: 5em;
+  max-height: 5em;
+  aspect-ratio: 1;
 }
 
 /* JM tag logo animation */
