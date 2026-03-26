@@ -47,7 +47,15 @@ body {
   display: grid;
   grid-template-columns: [left] auto [content] 1fr auto [right];
 
-  background-color: var(--navy-blue);
+  background: #0c091b;
+  background: radial-gradient(
+    circle,
+    rgba(12, 9, 27, 1) 0%,
+    rgba(23, 41, 82, 1) 50%,
+    var(--navy-blue) 100%
+  );
+  /* background-size: 100% 100%; */
+
   color: var(--white);
 }
 
@@ -149,7 +157,7 @@ img {
 
 .header .JM-logo svg {
   width: 5rem;
-  vertical-align: middle;
+  vertical-align: center;
 }
 
 /* Hamburger Navigation */
@@ -422,14 +430,17 @@ menu li > a:visited {
 /* Footer */
 
 .footer {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+
+  justify-content: center;
   align-items: center;
+
   background-color: var(--navy-blue);
 }
 
 .footer .JM-logo svg {
   width: 5em;
+  vertical-align: center;
 }
 
 .footer menu {
