@@ -66,6 +66,11 @@ main > * {
   width: 100%;
 }
 
+main,
+section {
+  scroll-margin-top: 67px;
+}
+
 /* General selectors */
 
 /* main .full-bleed {
@@ -130,10 +135,12 @@ img {
 /* Header */
 
 .header {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+
+  justify-content: center;
   align-items: center;
   background-color: var(--navy-blue);
+  width: 100%;
 
   position: sticky;
   z-index: 1000;
@@ -142,13 +149,14 @@ img {
 
 .header .JM-logo svg {
   width: 5rem;
+  vertical-align: middle;
 }
 
 /* Hamburger Navigation */
 
 nav {
-  position: relative;
-  justify-self: right;
+  position: absolute;
+  right: 0;
 }
 
 input.hamburger {
@@ -166,38 +174,18 @@ menu {
   padding: 1em 1em 1em 1.5em;
   margin: 0;
   border-radius: 1.5em 0 0 1.5em;
+  background-color: var(--yellow);
+  box-shadow: 0 0 0.2em 0.05em var(--yellow);
 
-  transform: translateX(10em);
+  transform: rotate3d(1, 0, 0, 90deg);
   transition:
     transform 300ms ease-out,
     opacity 100ms;
 }
 
-menu::after {
-  content: "";
-  display: block;
-  width: 150%;
-  height: 100%;
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  transform: translateX(10em);
-  transition: transform 400ms;
-  transition-delay: 400ms;
-  transition-timing-function: cubic-bezier(0.23, 0.395, 0.58, 1.23);
-
-  background-color: var(--yellow);
-  box-shadow: 0 0 0.2em 0.05em var(--yellow);
-  border-radius: 1em 0 0 1em;
-}
-
 .hamburger:checked ~ menu {
   opacity: 1;
-  transform: translateX(0);
-}
-
-.hamburger:checked ~ menu::after {
-  transform: translateX(0);
+  transform: rotate3d(1, 0, 0, 0deg) translateZ(5em);
 }
 
 .hamburger__button {
@@ -205,30 +193,21 @@ menu::after {
   width: 2.4em;
   height: 2.4em;
   aspect-ratio: 1;
+
+  background-color: transparent;
+  border-radius: 0.5em 0 0;
+
+  transition: background-color 100ms;
+
   position: relative;
   z-index: 100;
+
+  overflow-x: hidden;
 }
 
-.hamburger__button::after {
-  content: "";
-  display: block;
-  width: 150%;
-  height: 100%;
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  transform: translateX(3em);
-  transition: transform 400ms;
-  transition-delay: 400ms;
-  transition-timing-function: cubic-bezier(0.23, 0.395, 0.58, 1.23);
-
+.hamburger:checked + .hamburger__button {
   background-color: var(--yellow);
   box-shadow: 0 0 0.2em 0.05em var(--yellow);
-  border-radius: 0.5em 0 0;
-}
-
-.hamburger:checked + label .hamburger__button::after {
-  transform: translateX(0);
 }
 
 /* Buns */
@@ -238,38 +217,33 @@ menu::after {
   transition:
     transform 200ms ease-out,
     opacity 100ms,
-    border-color 100ms 500ms;
+    border-color 100ms;
 }
 
 .hamburger__button .bar ~ .bar {
   margin-top: 0.4em;
 }
 
-.hamburger:checked + label .bar {
+.hamburger:checked + .hamburger__button .bar {
   border-color: var(--navy-blue);
 }
 
-.hamburger:checked + label .bar--top {
+.hamburger:checked + .hamburger__button .bar--top {
   transform: scale(1.1) translateY(0.55em) rotate(45deg);
 }
 
-.hamburger:checked + label .bar--middle {
+.hamburger:checked + .hamburger__button .bar--middle {
   transform: translateX(5em);
   opacity: 0;
 }
 
-.hamburger:checked + label .bar--bottom {
+.hamburger:checked + .hamburger__button .bar--bottom {
   transform: scale(1.1) translateY(-0.35em) rotate(-45deg);
 }
 
 menu li > a,
 menu li > a:link,
 menu li > a:visited {
-  color: var(--yellow);
-  transition: color 200ms 400ms;
-}
-
-.hamburger:checked ~ menu li > a {
   color: var(--navy-blue);
 }
 
@@ -462,7 +436,7 @@ menu li > a:visited {
   bottom: 2.4em;
 }
 
-.footer .hamburger__button::after {
+.footer .hamburger__button {
   border-radius: 0 0 0 0.5em;
 }
 

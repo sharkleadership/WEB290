@@ -16,8 +16,7 @@
     </head>
     <body>
         <div class="wrapper">
-            <header class="header full-bleed">
-                <br>
+            <header class="header">
                 <h1 class="JM-logo" title="<JM>">
                     <!-- &lt;JM&gt; -->
                     <svg
@@ -58,20 +57,22 @@
                             class="JM-logo__gt" />
                     </svg>
                 </h1>
+                <!-- Tokenize SVG for optimization -->
                 <nav>
-                    <input type="checkbox" id="hamburger--header" class="hamburger hamburger--header"> 
                     <label for="hamburger--header">   
+                        <input type="checkbox" id="hamburger--header" class="hamburger hamburger--header">
                         <div class="hamburger__button" title="Open Menu">
                             <div class="bar bar--top"></div>
                             <div class="bar bar--middle"></div>
                             <div class="bar bar--bottom"></div>
                         </div>
+                        <menu>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </menu>
                     </label>
-                    <menu>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </menu>
+                    <!-- Embed menu in label so it closes? -->
                 </nav>
             </header>
             <main>
@@ -343,19 +344,19 @@
                     </svg>
                 </div>
                 <nav>
-                    <input type="checkbox" id="hamburger--footer" class="hamburger hamburger--footer"> 
                     <label for="hamburger--footer">   
+                        <input type="checkbox" id="hamburger--footer" class="hamburger hamburger--footer"> 
                         <div class="hamburger__button" title="Open Menu">
                             <div class="bar bar--top"></div>
                             <div class="bar bar--middle"></div>
                             <div class="bar bar--bottom"></div>
                         </div>
+                        <menu>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </menu>
                     </label>
-                    <menu>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </menu>
                 </nav>
             </footer>
         </div>
