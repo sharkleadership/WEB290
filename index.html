@@ -233,14 +233,16 @@
                                         <div class="links">
                                             <a href="" title="Link to LanguageBox's GitHub repo."><img src="./assets/images/github-mark-white.svg" alt="GitHub logo."></a>
                                             <a href="" title="Link to LanguageBox"><img src="./assets/images/open-link.svg" alt="Open link."></a>
-                                        </div>
+                                        </div> <!-- Semantic container, <nav>? -->
                                         <p>
                                             LanguageBox is a blog/learning resource dedicated to toki pona, the language of good. toki pona is a constructed language created in 2001 by Sonja Lang, known within the community as jan Sonja.
                                         </p>
                                         <p>
                                             This project's goal was to create a WordPress website on a topic of my choosing. The website needed to offer at least four pages and four posts of content.
                                         </p>
-                                        <p>This project was created as my final project in WEB 172 - WordPress I.</p>
+                                        <p>
+                                            This project was created as my final project in WEB 172 - WordPress I.
+                                        </p>
                                     </div>
                                 </dialog>
                             </figure>
@@ -259,28 +261,83 @@
                                 </summary>
                                 <img src="./assets/images/JM-tag-logo.svg" alt="<JM> logo." class="project-logo--JM">
                                 <p>
-                                    jeremymeyers.dev, affectionately called &lpar;by me&rpar; JMDev, is my portfolio, and coincidentally, the website you are on currently! Originally hobbled together over the course of my scholarship, JMDev has now been redesigned as part of a project for my capstone class &lparWEB 290&rpar;.
+                                    jeremymeyers.dev, affectionately called &lpar;by me&rpar; JMDev, is my portfolio, and coincidentally, the website you are on currently! Originally hobbled together over the course of my scholarship, JMDev has now been redesigned as a semester-long project for my capstone class &lparWEB 290&rpar;.
                                 </p>
                             </details>
                         </li> -->
-                        <!-- <li>
-                            <details class="projects__card">
-                                <summary>
-                                    <picture>
-                                        <source srcset="./assets/images/projects/KCDR_DesktopXL.png" media="(width >= 64em)" height="3730" width="2880">
-                                        <source srcset="./assets/images/projects/KCDR_Desktop.png" media="(width >= 48em)" height="3388" width="2048">
-                                        <source srcset="./assets/images/projects/KCDR_Tablet.png" media="(width >= 32em)" height="6840" width="1536">
-                                        <source srcset="./assets/images/projects/KCDR_Mobile.png" media="(width < 32em)" height="5580" width="896">
-                                        <img class="projects__picture" src="./assets/images/projects/KCDR_Mobile.png" alt="Example of my redesign of the website for the Kansas City Doberman Rescue." height="5580" width="896">
-                                    </picture>
+                        <li>
+                            <figure class="projects__card">
+                                <button class="projects__button" popovertarget="kcdr-desc">
+                                        <picture>
+                                            <source srcset="./assets/images/projects/KCDR/KCDR_DesktopXL_01.png" media="(width >= 64em)" height="1620" width="2880">
+                                            <source srcset="./assets/images/projects/KCDR/KCDR_Desktop_01.png" media="(width >= 48em)" height="1152" width="2048">
+                                            <source srcset="./assets/images/projects/KCDR/KCDR_Tablet_01.png" media="(width >= 32em)" height="2048" width="1536">
+                                            <source srcset="./assets/images/projects/KCDR/KCDR_Mobile_01.png" media="(width < 32em)" height="1511" width="850">
+                                            <img class="projects__picture" src="./assets/images/projects/KCDR_Mobile_01.png" alt="Example of the website KCDR." height="1511" width="850">
+                                        </picture>
                                     <h3>Kansas City Doberman Rescue</h3>
-                                </summary>
-                                <img src="./assets/images/projects/KCDR-logo.svg" alt="Kansas City Doberman Rescue redesigned logo." class="project-logo--KCDR">
-                                <p>
-                                    Kansas City Doberman Rescue is a volunteer organization that rescues Dobermans. I redesigned their website to fix some of its challenges, focusing on its disjointed styles, outdated code, and content fatigue. This project was created as my final project in WEB 122 – CSS Techniques and Projects.
-                                </p>
-                            </details>
-                        </li> -->
+                                </button>
+                                <dialog class="projects__desc kcdr-desc" id="kcdr-desc" popover>
+                                    <button popovertarget="kcdr-desc" popovertargetaction="hide" class="projects__desc__hide">Hide</button>
+                                    <div class="picture-container">
+                                        <picture>
+                                            <source srcset="./assets/images/projects/KCDR/KCDR_DesktopXL_01.png" media="(width >= 64em)" height="1620" width="2880">
+                                            <source srcset="./assets/images/projects/KCDR/KCDR_Desktop_01.png" media="(width >= 48em)" height="1152" width="2048">
+                                            <source srcset="./assets/images/projects/KCDR/KCDR_Tablet_01.png" media="(width >= 32em)" height="2048" width="1536">
+                                            <source srcset="./assets/images/projects/KCDR/KCDR_Mobile_01.png" media="(width < 32em)" height="1511" width="850">
+                                            <img class="projects__picture" src="./assets/images/projects/KCDR_Mobile_01.png" alt="Example of the website KCDR." height="1511" width="850">
+                                        </picture>
+                                        <picture>
+                                            <source srcset="./assets/images/projects/KCDR/KCDR_DesktopXL_02.png" media="(width >= 64em)" height="1620" width="2880">
+                                            <source srcset="./assets/images/projects/KCDR/KCDR_Desktop_02.png" media="(width >= 48em)" height="1152" width="2048">
+                                            <source srcset="./assets/images/projects/KCDR/KCDR_Tablet_02.png" media="(width >= 32em)" height="2048" width="1536">
+                                            <source srcset="./assets/images/projects/KCDR/KCDR_Mobile_02.png" media="(width < 32em)" height="1511" width="850">
+                                            <img class="projects__picture" src="./assets/images/projects/KCDR_Mobile_01.png" alt="Example of the website KCDR." height="1511" width="850">
+                                        </picture>
+                                        <picture>
+                                            <source srcset="./assets/images/projects/KCDR/KCDR_DesktopXL_03.png" media="(width >= 64em)" height="1344" width="2880">
+                                            <source srcset="./assets/images/projects/KCDR/KCDR_Desktop_03.png" media="(width >= 48em)" height="1152" width="2048">
+                                            <source srcset="./assets/images/projects/KCDR/KCDR_Tablet_03.png" media="(width >= 32em)" height="1342" width="1536">
+                                            <source srcset="./assets/images/projects/KCDR/KCDR_Mobile_03.png" media="(width < 32em)" height="1511" width="850">
+                                            <img class="projects__picture" src="./assets/images/projects/KCDR_Mobile_01.png" alt="Example of the website KCDR." height="1592" width="850">
+                                        </picture>
+                                        <picture>
+                                            <source srcset="./" media="(width >= 64em)">
+                                            <source srcset="./assets/images/projects/KCDR/KCDR_Desktop_04.png" media="(width >= 48em)" height="1152" width="2048">
+                                            <source srcset="./" media="(width >= 32em)">
+                                            <source srcset="./assets/images/projects/KCDR/KCDR_Mobile_04.png" media="(width < 32em)" height="1511" width="850">
+                                            <img class="projects__picture" src="./assets/images/projects/KCDR_Mobile_01.png" alt="Example of the website KCDR.">
+                                        </picture>
+                                        <picture>
+                                            <source srcset="./" media="(width >= 64em)">
+                                            <source srcset="./assets/images/projects/KCDR/KCDR_Desktop_05.png" media="(width >= 48em)" height="158" width="2048">
+                                            <source srcset="./" media="(width >= 32em)">
+                                            <source srcset="./assets/images/projects/KCDR/KCDR_Mobile_05.png" media="(width < 32em)" height="1286" width="850">
+                                            <img class="projects__picture" src="./assets/images/projects/KCDR_Mobile_01.png" alt="Example of the website KCDR.">
+                                        </picture>
+                                    </div>
+                                    <div class="info">
+                                        <hgroup>
+                                            <img src="./assets/images/projects/KCDR-logo.svg" alt="KCDR (redesigned) logo." class="project-logo--KCDR">
+                                            <h3>Kansas City Doberman Rescue</h3>
+                                        </hgroup>
+                                        <div class="links">
+                                            <a href="" title="Link to KCDR's GitHub repo."><img src="./assets/images/github-mark-white.svg" alt="GitHub logo."></a>
+                                            <a href="" title="Link to KCDR"><img src="./assets/images/open-link.svg" alt="Open link."></a>
+                                        </div> <!-- Semantic container, <nav>? -->
+                                        <p>
+                                            Kansas City Doberman Rescue is a volunteer organization that rescues Dobermans.
+                                        </p>
+                                        <p>
+                                            This project's goal was to redesign their website to fix some of its challenges, focusing on its disjointed styles, outdated code, and content fatigue.
+                                        </p>
+                                        <p>
+                                            This project was created as my final project in WEB 122 – CSS Techniques and Projects.
+                                        </p>
+                                    </div>
+                                </dialog>
+                            </figure>
+                        </li>
                     </ul>
                 </section>
                 <section class="other-projects">

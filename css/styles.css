@@ -113,19 +113,19 @@ h6 {
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 2rem;
 }
 
 h2 {
-  font-size: 1.75em;
+  font-size: 1.75rem;
 }
 
 h3 {
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 h4 {
-  font-size: 1.25em;
+  font-size: 1.25rem;
 }
 
 p,
@@ -260,6 +260,8 @@ menu li > a:visited {
 
 .hero h2 {
   margin: 2em 0 0;
+  position: relative;
+  z-index: 100;
 }
 
 .hero {
@@ -371,6 +373,7 @@ menu li > a:visited {
   bottom: 0;
   width: 100%;
   padding: 0.5em;
+  font-size: 1rem;
 
   background-color: hsl(from var(--navy-blue) h s l / 0.5);
   color: var(--white);
@@ -384,10 +387,6 @@ menu li > a:visited {
   max-width: calc(calc(100vh - (1.4 * 3em) - var(--header-height)) * 9 / 16);
 }
 
-.projects__desc .projects__picture {
-  /* max-width: 90vw; */
-}
-
 .projects__desc {
   inset: 0.5em;
   background-color: var(--navy-blue);
@@ -396,6 +395,7 @@ menu li > a:visited {
   max-height: calc(100vh - 0.5em);
   max-width: calc(100vw - 0.5em);
   /* padding: 1rem; */
+  scroll-snap-type: y proximity;
 }
 
 .projects__desc__hide {
@@ -404,10 +404,34 @@ menu li > a:visited {
   right: 0;
 }
 
+.projects__desc .picture-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+  max-width: 100%;
+  max-height: calc(calc(100vh - 16rem) * 16 / 9);
+  margin: 0 auto;
+  scroll-snap-type: y mandatory;
+  scroll-snap-align: end;
+}
+
+.projects__desc .projects__picture {
+  height: auto;
+  width: 100%;
+  scroll-snap-align: start;
+}
+
+.projects__desc .projects__picture:last-child {
+  aspect-ratio: initial;
+  scroll-snap-align: end;
+}
+
 .projects__desc .info {
   transform: translateY(-2em);
   background-color: hsl(from var(--navy-blue) h s l / 0.5);
   padding: 0.5rem;
+  scroll-snap-align: start;
 }
 
 .projects__desc [class*="project-logo"] {
@@ -444,12 +468,6 @@ menu li > a:visited {
 
 .projects__desc h3 {
   font-size: 1.25em;
-}
-
-.projects__desc .picture-container {
-  overflow-y: scroll;
-  max-width: calc(100% - 2.5rem);
-  max-height: calc(calc(100vw - 5rem) * 16 / 9);
 }
 
 /* JM tag logo animation */
