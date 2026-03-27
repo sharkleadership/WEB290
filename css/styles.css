@@ -130,7 +130,8 @@ h4 {
 }
 
 p,
-a {
+a,
+span {
   font-family: "Ubuntu", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -492,6 +493,61 @@ menu li > a:visited {
 
 .projects__desc h3 {
   font-size: 1.25em;
+}
+
+/* Other Projects */
+
+.other-projects ul {
+  max-width: 100%;
+}
+
+[class*="other-project-logo"] {
+  border-radius: 0.25rem;
+  max-width: 4rem;
+  max-height: 4rem;
+  aspect-ratio: 1;
+}
+
+.other-projects__proj details > summary {
+  list-style-type: none;
+  width: 100%;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+.other-projects__proj summary h4 {
+  max-width: fit-content;
+}
+
+.other-projects__proj details:not([open]) summary span {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  /* white-space: nowrap; */
+  text-overflow: ellipsis;
+  max-height: calc(1.4 * 1em);
+  max-width: calc(100% - 1ch);
+}
+
+.other-projects__proj details:not([open]) summary span::after {
+  content: "…";
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.other-projects__proj details[open] summary span {
+  display: none;
+}
+
+.media {
+  display: grid;
+  grid-template-columns: 4rem auto;
+  justify-content: start;
+  gap: 0.5em;
 }
 
 /* JM tag logo animation */
