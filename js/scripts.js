@@ -24,3 +24,9 @@ function japaneseGreeting() {
     setInterval(japaneseGreeting, 1000);
 }
 japaneseGreeting();
+
+let inception = new Inception({
+    iframeContainerId: "JMdev-droste-container",
+    levels: 2,
+    classesToRemove: ["header", "footer"]
+});

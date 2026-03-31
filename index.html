@@ -12,6 +12,7 @@
         <link rel="preload" href="./assets/fonts/Corporate-Logo-Rounded-Bold-ver3.woff2" as="font" type="font/woff2" crossorigin>
 
         <link rel="stylesheet" href="./css/styles.css">
+        <script src="./js/inception.js"></script>
         <script src="./js/scripts.js" defer></script>
     </head>
     <body>
@@ -250,24 +251,76 @@
                                 </dialog>
                             </figure>
                         </li>
-                        <!-- <li>
-                            <details class="projects__card">
-                                <summary>
-                                    <picture>
-                                        <source srcset="./assets/images/projects/" media="" height="" width="">
-                                        <source srcset="./assets/images/projects/" media="" height="" width="">
-                                        <source srcset="./assets/images/projects/" media="" height="" width="">
-                                        <source srcset="./assets/images/projects/" media="" height="" width="">
-                                        <img src="./assets/images/projects/" alt="" height="" width="">
-                                    </picture> <!-- NOSCRIPT: Image --><!--
+                        <li>
+                            <figure class="projects__card">
+                                <button class="projects__button" popovertarget="JMdev-desc">
+                                    <div id="JMdev-droste-container">
+                                        <div id="disable-iframe-clicks"></div>
+                                    </div>
+                                    <noscript>
+                                        <picture>
+                                            <source srcset="./assets/images/" media="(width >= 64em)" height="1620" width="2880">
+                                            <source srcset="./assets/images/" media="(width >= 48em)" height="1152" width="2048">
+                                            <source srcset="./assets/images/" media="(width >= 32em)" height="2048" width="1536">
+                                            <source srcset="./assets/images/" media="(width < 32em)" height="1592" width="896">
+                                            <img class="projects__picture" src="./assets/images/" alt="Example of the website jeremymeyers.dev." height="1592" width="896">
+                                        </picture>
+                                    </noscript>
                                     <h3>jeremymeyers.dev</h3>
-                                </summary>
-                                <img src="./assets/images/JM-tag-logo.svg" alt="<JM> logo." class="project-logo--JM">
-                                <p>
-                                    jeremymeyers.dev, affectionately called &lpar;by me&rpar; JMDev, is my portfolio, and coincidentally, the website you are on currently! Originally hobbled together over the course of my scholarship, JMDev has now been redesigned as a semester-long project for my capstone class &lparWEB 290&rpar;.
-                                </p>
-                            </details>
-                        </li> -->
+                                </button>
+                                <dialog class="projects__desc JMdev-desc" id="JMdev-desc" popover>
+                                    <button popovertarget="JMdev-desc" popovertargetaction="hide" class="projects__desc__hide" title="Close">
+                                        <span class="bar bar--left"></span>
+                                        <span class="bar bar--right"></span>
+                                    </button>
+                                    <div class="picture-container">
+                                        <picture>
+                                            <source srcset="./assets/images/projects/languagebox/languagebox_DesktopXL_01.png" media="(width >= 64em)" height="1620" width="2880">
+                                            <source srcset="./assets/images/projects/languagebox/languagebox_Desktop_01.png" media="(width >= 48em)" height="1152" width="2048">
+                                            <source srcset="./assets/images/projects/languagebox/languagebox_Tablet_01.png" media="(width >= 32em)" height="2048" width="1536">
+                                            <source srcset="./assets/images/projects/languagebox/languagebox_Mobile_01.png" media="(width < 32em)" height="1592" width="896">
+                                            <img class="projects__picture" src="./assets/images/projects/languagebox_Mobile_01.png" alt="Example of the website LanguageBox." height="1592" width="896">
+                                        </picture>
+                                        <picture>
+                                            <source srcset="./assets/images/projects/languagebox/languagebox_DesktopXL_02.png" media="(width >= 64em)" height="1620" width="2880">
+                                            <source srcset="./assets/images/projects/languagebox/languagebox_Desktop_02.png" media="(width >= 48em)" height="1152" width="2048">
+                                            <source srcset="./assets/images/projects/languagebox/languagebox_Tablet_02.png" media="(width >= 32em)" height="2048" width="1536">
+                                            <source srcset="./assets/images/projects/languagebox/languagebox_Mobile_02.png" media="(width < 32em)" height="1592" width="896">
+                                            <img class="projects__picture" src="./assets/images/projects/languagebox_Mobile_01.png" alt="Example of the website LanguageBox." height="1592" width="896">
+                                        </picture>
+                                        <picture>
+                                            <source srcset="./assets/images/projects/languagebox/languagebox_DesktopXL_03.png" media="(width >= 64em)" height="1620" width="2880">
+                                            <source srcset="./assets/images/projects/languagebox/languagebox_Desktop_03.png" media="(width >= 48em)" height="1152" width="2048">
+                                            <source srcset="./assets/images/projects/languagebox/languagebox_Tablet_03.png" media="(width >= 32em)" height="2048" width="1536">
+                                            <source srcset="./assets/images/projects/languagebox/languagebox_Mobile_03.png" media="(width < 32em)" height="1592" width="896">
+                                            <img class="projects__picture" src="./assets/images/projects/languagebox_Mobile_01.png" alt="Example of the website LanguageBox." height="1592" width="896">
+                                        </picture>
+                                        <picture>
+                                            <source srcset="./" media="(width >= 48em)">
+                                            <source srcset="./assets/images/projects/languagebox/languagebox_Tablet_04.png" media="(width >= 32em)" height="696" width="1536">
+                                            <source srcset="./assets/images/projects/languagebox/languagebox_Mobile_04.png" media="(width < 32em)" height="804" width="896">
+                                            <img class="projects__picture" src="./assets/images/projects/languagebox_Mobile_01.png" alt="Example of the website LanguageBox.">
+                                        </picture>
+                                    </div>
+                                    <div class="info">
+                                        <hgroup>
+                                            <img src="./assets/images/JM-tag-logo.svg" alt="<JM> logo." class="project-logo--JM">
+                                            <h3>jeremymeyers.dev</h3>
+                                        </hgroup>
+                                        <div class="links">
+                                            <a href="" title="Link to jeremymeyers.dev's GitHub repo."><img src="./assets/images/github-mark-white.svg" alt="GitHub logo."></a>
+                                            <a href="" title="Link to jeremymeyers.dev"><img src="./assets/images/open-link.svg" alt="Open link."></a>
+                                        </div> <!-- Semantic container, <nav>? -->
+                                        <p>
+                                            jeremymeyers.dev, affectionately called &lpar;by me&rpar; JMDev, is my portfolio, and coincidentally, the website you are on currently!
+                                        </p>
+                                        <p>
+                                            Originally hobbled together over the course of my scholarship, JMDev has now been redesigned as a semester-long project for my capstone class &lparWEB 290&rpar;.
+                                        </p>
+                                    </div>
+                                </dialog>
+                            </figure>
+                        </li>
                         <li>
                             <figure class="projects__card">
                                 <button class="projects__button" popovertarget="kcdr-desc">

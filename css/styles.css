@@ -497,6 +497,23 @@ menu li > a:visited {
   font-size: 1.25em;
 }
 
+#JMdev-droste-container {
+  position: relative;
+  border: 0.25em solid var(--dodgerblue);
+  aspect-ratio: 9 / 16;
+  /* object-fit: contain; */
+  /* object-position: 0% 0%; */
+  height: calc(100vh - (1.4 * 3em) - var(--header-height));
+  width: calc(calc(100vh - (1.4 * 3em) - var(--header-height)) * 9 / 16);
+}
+
+#disable-iframe-clicks {
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+}
+
 /* Other Projects */
 
 .other-projects ul {
