@@ -262,7 +262,7 @@ menu li > a:visited {
 /* Hero */
 
 .hero h2 {
-  margin: 2em 0 0;
+  margin: calc(calc(100vh - var(--header-height)) / 4) 0;
   position: relative;
   z-index: 100;
 }
@@ -270,11 +270,12 @@ menu li > a:visited {
 .hero {
   position: relative;
   padding: 4rem 0;
+  height: calc(100vh - var(--header-height));
 }
 
 .three-d-face {
   position: absolute;
-  top: 2rem;
+  top: 5rem;
   left: calc(50% - 2.5em);
 
   max-width: 5em;
