@@ -86,8 +86,6 @@ let inception = new Inception({
     iframeContainerId: "JMdev-droste-container",
     levels: 2,
     classesToRemove: ["header", "footer"],
-    sameHeightAsUser: true,
-    leftAlignWith: "JMdev-droste-container",
 });
 
 inception.onload = function() {
