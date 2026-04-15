@@ -85,5 +85,18 @@ hamburgerButtons.forEach((button) => {
 let inception = new Inception({
     iframeContainerId: "JMdev-droste-container",
     levels: 2,
-    classesToRemove: ["header", "footer"]
+    classesToRemove: ["header", "footer"],
+    sameHeightAsUser: true,
+    leftAlignWith: "JMdev-droste-container",
 });
+
+inception.onload = function() {
+    console.log(this.iframes[0]);
+    this.iframes[0].tabIndex = -1;
+    let baseFontSize = 20;
+    for (let iframe of this.iframes) {
+        console.log(iframe.contentDocument.children[0].style);
+        iframe.contentDocument.children[0].style.fontSize = `${baseFontSize}px`;
+        baseFontSize -= 4;
+    };
+}
