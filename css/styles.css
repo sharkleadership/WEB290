@@ -15,7 +15,6 @@
 
 :root {
   font-size: 18pt;
-  font-size: clamp(18pt, calc(1vw + (0.6 * 18pt)), calc(1.125 * 18pt));
   --dodgerblue: hsl(210, 100%, 56%);
   --navy-blue: hsl(251, 52%, 13%);
   --yellow: hsl(58, 73%, 62%);
@@ -26,7 +25,7 @@
   box-sizing: border-box;
   line-height: 1.4;
 
-  --header-height: calc(1.4 * 1em * 2);
+  --header-height: calc(1.4 * 1rem * 2);
 }
 
 *,
@@ -703,7 +702,7 @@ button:disabled {
   border-radius: 0 0 0 0.5em;
 }
 
-@media (min-width: 32rem) {
+@media (min-width: 768px) {
   /* About section */
 
   .rubiks-cube-container {
@@ -763,8 +762,8 @@ button:disabled {
     max-width: 13em;
   }
 }
-/* 
-@media (min-width: 42rem) {
+
+@media (min-width: 1024px) {
   .projects__card {
     aspect-ratio: 16 / 9;
 
@@ -774,5 +773,5 @@ button:disabled {
   }
 }
 
-@media (min-width: 60em) {
-} */
+@media (min-width: 1440px) {
+}
