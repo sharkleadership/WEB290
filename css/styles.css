@@ -261,7 +261,6 @@ menu li > a:visited {
 /* Hero */
 
 .hero h2 {
-  margin: calc(calc(100vh - var(--header-height)) / 4) 0;
   position: relative;
   z-index: 100;
 }
@@ -270,13 +269,15 @@ menu li > a:visited {
   position: relative;
   padding: 4rem 0;
   height: calc(100vh - var(--header-height));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .three-d-face {
   position: absolute;
-  top: 5rem;
-  left: calc(50% - 2.5em);
-
+  transform: translateY(-5em);
   max-width: 5em;
 }
 
@@ -396,8 +397,8 @@ menu li > a:visited {
   aspect-ratio: 9 / 16;
   object-fit: contain;
   object-position: 0% 0%;
-  max-height: calc(100vh - (1.4 * 3em) - var(--header-height));
-  max-width: calc(calc(100vh - (1.4 * 3em) - var(--header-height)) * 9 / 16);
+  max-height: calc(100vh - (1.4 * 3rem) - var(--header-height));
+  max-width: calc(calc(100vh - (1.4 * 3rem) - var(--header-height)) * 9 / 16);
 }
 
 .projects__desc {
@@ -413,9 +414,9 @@ menu li > a:visited {
 }
 
 .projects__desc__hide {
-  position: absolute;
-  top: 0.5em;
-  right: 0.5em;
+  position: fixed;
+  top: 2em;
+  right: 2em;
 
   padding: 0.5em;
   width: 2rem;
