@@ -1,5 +1,7 @@
-// JM, 03/11/26
+// JM, 04/15/26
 "use strict";
+
+// Japanese greeting - Hero
 
 const currentHour = function() {
     const hour = new Date().getHours();
@@ -24,6 +26,48 @@ function japaneseGreeting() {
     setInterval(japaneseGreeting, 1000);
 }
 japaneseGreeting();
+
+// Hamburger Menu
+
+const lis = document.querySelectorAll("nav menu li");
+const topMenuCheck = document.querySelector("#hamburger--header");
+const footerMenuCheck = document.querySelector("#hamburger--footer");
+
+document.body.addEventListener("click", (e) => {
+    if (e.target.classList.contains("hamburger__button") || 
+        e.target.id.includes("hamburger--")) {
+        return;
+    }
+    if (topMenuCheck.checked || footerMenuCheck.checked) {
+        topMenuCheck.checked = false;
+        footerMenuCheck.checked = false;
+    }
+});
+
+lis.forEach((li) => {
+    li.addEventListener("click", (e) => {
+        e.stopPropagation();
+        topMenuCheck.checked = false;
+        footerMenuCheck.checked = false;
+    });
+});
+
+// ACCESSIBILITY: escape listener
+document.body.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+        if (e.target.classList.contains("hamburger__button") || 
+            e.target.id.includes("hamburger--")) {
+            return;
+        }
+        if (topMenuCheck.checked || footerMenuCheck.checked) {
+            topMenuCheck.checked = false;
+            footerMenuCheck.checked = false;
+        }
+    }
+});
+
+
+// Inception
 
 let inception = new Inception({
     iframeContainerId: "JMdev-droste-container",
