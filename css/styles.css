@@ -745,6 +745,12 @@ button:disabled {
     max-height: calc(calc(100vh - 6rem) * 3 / 4);
   }
 
+  /* Remove picture elements that do not have content */
+  .kcdr-desc picture:nth-of-type(4),
+  .kcdr-desc picture:nth-of-type(5) {
+    display: none;
+  }
+
   /* Other Projects */
 
   .other-projects ul {
@@ -771,7 +777,25 @@ button:disabled {
       aspect-ratio: 16 / 9;
     }
   }
+
+  /* Remove picture elements that do not have content */
+  .languagebox-desc picture:nth-of-type(4) {
+    display: none;
+  }
+
+  /* Readd picture elements that do have content */
+  .kcdr-desc picture:nth-of-type(4),
+  .kcdr-desc picture:nth-of-type(5) {
+    display: block;
+  }
 }
 
 @media (min-width: 1440px) {
+  /* Projects */
+
+  /* Remove picture elements that do not have content */
+  .kcdr-desc picture:nth-of-type(4),
+  .kcdr-desc picture:nth-of-type(5) {
+    display: none;
+  }
 }
