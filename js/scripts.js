@@ -30,6 +30,7 @@ japaneseGreeting();
 // Hamburger Menu
 
 const lis = document.querySelectorAll("nav menu li");
+const hamburgerButtons = document.querySelectorAll(".hamburger__button");
 const topMenuCheck = document.querySelector("#hamburger--header");
 const footerMenuCheck = document.querySelector("#hamburger--footer");
 
@@ -53,17 +54,29 @@ lis.forEach((li) => {
 });
 
 // ACCESSIBILITY: escape listener
-document.body.addEventListener("keydown", (e) => {
+
+function handleHamburgerEscape(e) {
     if (e.key === "Escape") {
-        if (e.target.classList.contains("hamburger__button") || 
-            e.target.id.includes("hamburger--")) {
-            return;
-        }
         if (topMenuCheck.checked || footerMenuCheck.checked) {
             topMenuCheck.checked = false;
             footerMenuCheck.checked = false;
         }
     }
+}
+
+hamburgerButtons.forEach((button) => {
+    button.addEventListener("click", (e) => {
+        if (!topMenuCheck.checked || !footerMenuCheck.checked) {
+            document.addEventListener("keydown", handleHamburgerEscape);
+        } else {
+            document.removeEventListener("keydown", handleHamburgerEscape);
+        }
+    });
+    button.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
+            button.click();
+        }
+    });
 });
 
 
