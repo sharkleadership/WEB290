@@ -158,9 +158,12 @@ img {
   top: 0;
 }
 
+.header .JM-logo {
+  display: contents;
+}
+
 .header .JM-logo svg {
   width: 5rem;
-  vertical-align: center;
 }
 
 /* Hamburger Navigation */
@@ -224,6 +227,7 @@ menu {
 /* Buns */
 
 .hamburger__button .bar {
+  transform: translateY(0.125em);
   border-bottom: 0.125em solid var(--white);
   transition:
     transform 200ms ease-out,
