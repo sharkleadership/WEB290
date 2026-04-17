@@ -712,20 +712,26 @@ button:disabled {
 }
 
 @media (min-width: 768px) {
-  /* About section */
+  /* Hero */
 
-  .rubiks-cube-container {
-    float: left;
-    margin-right: 1em;
+  .hero {
   }
 
-  .rubiks-cube-container + p {
-    /* margin: auto; */
-    /* ALIGN TO CENTER? */
+  /* About section */
+
+  .about .media {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+  }
+
+  .rubiks-cube-container {
+    /* float: left; */
+    /* margin-right: 1em; */
   }
 
   .rubiks-cube-container + p + p {
-    clear: both;
+    /* clear: both; */
   }
 
   /* Projects section */
@@ -790,15 +796,51 @@ button:disabled {
   /* Contact */
 
   .contact-method-list {
-    max-width: 13em;
+    max-width: 12em;
   }
 }
 
 @media (min-width: 1024px) {
+  /* Double container */
+
+  main {
+    grid-template-columns: [left] 1fr [content] 80vw 1fr [right];
+  }
+
+  /* Hero */
+
+  .hero {
+    gap: 2rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .three-d-face {
+    position: initial;
+    /* PLACEHOLDER: Get a bigger image + 3D model viewer */
+    transform: scale(1.15);
+    max-width: 8rem;
+  }
+
+  /* About */
+
+  .about {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  /* Projects */
+
+  /* Projects section */
+
   .projects__card {
     aspect-ratio: 16 / 9;
-  .projects__button {
-    max-width: 90%;
+    margin: 4rem auto;
+  }
+
+  .projects__card:first-of-type {
+    margin-top: 1.5rem;
   }
 
   .projects__picture {
