@@ -349,6 +349,14 @@ menu li > a:visited {
   vertical-align: middle;
 }
 
+.about .media {
+  display: block;
+}
+
+.about * + p {
+  margin-top: 0;
+}
+
 .rubiks-cube-container {
   max-width: 10rem;
   margin: 0 auto;
@@ -875,6 +883,37 @@ button:disabled {
   .kcdr-desc picture:nth-of-type(4),
   .kcdr-desc picture:nth-of-type(5) {
     display: block;
+  }
+
+  /* Other Projects */
+
+  .other-projects ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    gap: 1em;
+  }
+
+  .other-projects__proj {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .other-projects__proj summary h4 {
+    max-width: initial;
+    text-align: center;
+  }
+
+  [class*="other-project-logo"] {
+    max-width: 8rem;
+    max-height: 8rem;
+    aspect-ratio: 1;
+  }
+
+  .other-projects__proj details:not([open]) summary span {
+    white-space: initial;
+    max-height: calc(1.4 * 3rem);
   }
 }
 
