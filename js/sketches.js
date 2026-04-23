@@ -12,9 +12,9 @@ const egghead = function(p) {
         headsetCanvas.parent("#egghead-headset");
         headsetCanvas.canvas.id = "egghead-headset-sketch";
         
-        headsetModel = await p.loadModel("../assets/sketches/vr-headset.obj", ".obj", true);
-        irisImage = await p.loadImage("../assets/sketches/iris.png");
-        tagLogoImg = await p.loadImage("../assets/sketches/JM-tag-logo.png");
+        headsetModel = await p.loadModel("./assets/sketches/vr-headset.obj", ".obj", true);
+        irisImage = await p.loadImage("./assets/sketches/iris.png");
+        tagLogoImg = await p.loadImage("./assets/sketches/JM-tag-logo.png");
         
         leftIrisGeo = p.buildGeometry(p.drawLeftIris);
         leftIrisGeo.flipU();
@@ -122,8 +122,8 @@ const rubiks = function(p) {
         rubiksCanvas.parent("#rubiks-cube");
         rubiksCanvas.canvas.id = "rubiks-cube-sketch";
         
-        rubiksModel = await p.loadModel("../assets/sketches/rubiks.obj", ".obj", true);
-        logoImage = await p.loadImage("../assets/sketches/rubiks-white-logo.png");
+        rubiksModel = await p.loadModel("./assets/sketches/rubiks.obj", ".obj", true);
+        logoImage = await p.loadImage("./assets/sketches/rubiks-white-logo.png");
 
         logoGeo = p.buildGeometry(p.drawLogo);
         logoGeo.flipV();
