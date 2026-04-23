@@ -13,7 +13,10 @@
 
         <link rel="stylesheet" href="./css/styles.css">
         <script src="./js/inception.js"></script>
+        <script src="./js/p5.min.js"></script>
+
         <script src="./js/scripts.js" defer></script>
+        <script src="./js/sketches.js" defer></script>
     </head>
     <body>
         <div class="wrapper">
@@ -79,8 +82,14 @@
             <main>
                 <section id="hero" class="hero full-bleed">
                     <div class="three-d-face">
-                        <img src="./assets/images/3d model.png" alt='"3D" Model'> <!-- PLACEHOLDER: 3D model of head with mask with lettermark -->
-                        <noscript><img src="./assets/images/3d model.png" alt='"3D" Model'></noscript>
+                        <div id="egghead-headset"></div>
+                        <noscript>
+                            <picture>
+                                <source srcset="./assets/images/egghead.webp" type="image/webp">
+                                <source srcset="./assets/images/egghead.png" type="image/png">
+                                <img src="./assets/images/egghead.png" alt='An image of a 3D Model of an egghead wearing a VR headset.'>
+                            </picture>
+                        </noscript>
                     </div>
                     <h2>
                         <span class="salutation__window">
@@ -143,8 +152,14 @@
                     </p>
                     <div class="media">
                         <div class="rubiks-cube-container">
-                            <img src="./assets/images/rubiks-cube.png" alt="Photo of a Rubik's Cube."> <!-- PLACEHOLDER: Spinning Rubik's Cube 3D Model?/GIF -->
-                            <noscript><img src="./assets/images/rubiks-cube.png" alt="Photo of a Rubik's Cube."></noscript>
+                            <div id="rubiks-cube" title="Photo of a Rubik's Cube spinning."></div>
+                            <noscript>
+                                <picture>
+                                    <source srcset="./assets/images/rubiks-turn.webp" type="image/webp">
+                                    <source srcset="./assets/images/rubiks-turn.gif" type="image/gif">
+                                    <img src="./assets/images/rubiks-turn.gif" alt="Photo of a Rubik's Cube spinning.">
+                                </picture>
+                            </noscript>
                         </div>
                         <p>
                             As I grew, I continued learning and creating projects using basic HTML and JavaScript. Fast forward to the present, I am a student of Web Development & Digital Media!

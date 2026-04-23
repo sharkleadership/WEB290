@@ -282,7 +282,11 @@ menu li > a:visited {
 .three-d-face {
   position: absolute;
   transform: translateY(-5em);
-  max-width: 5em;
+  max-width: 10em;
+}
+
+#egghead-headset {
+  display: contents;
 }
 
 /* Salutation */
@@ -358,8 +362,13 @@ menu li > a:visited {
 }
 
 .rubiks-cube-container {
-  max-width: 10rem;
+  width: fit-content;
+  max-width: 10em;
   margin: 0 auto;
+}
+
+#rubiks-cube {
+  display: contents;
 }
 
 /* Projects */
@@ -731,6 +740,7 @@ button:disabled {
     display: flex;
     gap: 1em;
     align-items: center;
+    max-width: 70ch;
   }
 
   .rubiks-cube-container {
@@ -826,9 +836,7 @@ button:disabled {
 
   .three-d-face {
     position: initial;
-    /* PLACEHOLDER: Get a bigger image + 3D model viewer */
-    transform: scale(1.15);
-    max-width: 8rem;
+    transform: none;
   }
 
   /* About */
@@ -859,7 +867,7 @@ button:disabled {
   }
 
   #JMdev-droste-container {
-      aspect-ratio: 16 / 9;
+    aspect-ratio: 16 / 9;
     height: auto;
     width: 80vw;
   }
