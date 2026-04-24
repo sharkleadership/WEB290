@@ -215,6 +215,8 @@ menu {
 
   transition: background-color 100ms;
 
+  cursor: pointer;
+
   position: relative;
   z-index: 100;
 
@@ -393,6 +395,7 @@ menu li > a:visited {
   padding: 0;
   margin: 0;
   border: none;
+  cursor: pointer;
 }
 
 .projects__card {
@@ -575,6 +578,7 @@ menu li > a:visited {
 .other-projects__proj details > summary {
   list-style-type: none;
   width: 100%;
+  cursor: pointer;
 }
 
 summary::-webkit-details-marker {
@@ -704,6 +708,7 @@ button:disabled {
   background-color: hsl(from var(--dodgerblue) h 0 calc(l + 25));
   border: 0.25em hsl(from var(--dodgerblue) h 0 l) solid;
   color: var(--navy-blue);
+  cursor: not-allowed;
 }
 
 /* Footer */
