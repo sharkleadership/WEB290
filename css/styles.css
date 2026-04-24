@@ -171,6 +171,8 @@ img {
 nav {
   position: absolute;
   right: 0;
+  display: flex;
+  gap: 0.5em;
 }
 
 input.hamburger {
@@ -707,12 +709,15 @@ button:disabled {
 /* Footer */
 
 .footer {
+  background-color: var(--navy-blue);
+}
+
+.footer nav {
   display: flex;
 
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-
-  background-color: var(--navy-blue);
+  position: relative;
 }
 
 .footer .JM-logo svg {
@@ -726,6 +731,15 @@ button:disabled {
 
 .footer .hamburger__button {
   border-radius: 0 0 0 0.5em;
+}
+
+.nav__github {
+  max-width: 2em;
+  max-height: 2em;
+  aspect-ratio: 1;
+  display: block;
+  margin-left: 0.5em;
+  padding: 0.125em;
 }
 
 @media (min-width: 768px) {
