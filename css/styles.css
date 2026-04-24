@@ -187,7 +187,7 @@ menu {
 
   list-style-type: none;
   line-height: 2;
-  padding: 1em 1em 1em 1.5em;
+  padding: 0.5em 0;
   margin: 0;
   border-radius: 1.5em 0 0 1.5em;
   background-color: var(--yellow);
@@ -709,6 +709,37 @@ button:disabled {
   border: 0.25em hsl(from var(--dodgerblue) h 0 l) solid;
   color: var(--navy-blue);
   cursor: not-allowed;
+}
+
+/* Hover/Active */
+
+nav menu li,
+.projects__desc .links a,
+.projects__desc .links button,
+.other-projects__proj .links a,
+.contact-button:not(:disabled) {
+  transition: color 200ms ease-out;
+}
+
+nav menu li:hover,
+.projects__desc .links a:hover,
+.projects__desc .links button:hover,
+.other-projects__proj .links a:hover,
+.contact-button:not(:disabled):hover {
+  background-color: var(--yellow);
+  color: var(--navy-blue);
+}
+
+.projects__desc .links *:hover .nav__github {
+  /* CHANGE TO BLACK */
+}
+
+nav menu li:active,
+.projects__desc .links a:active,
+.projects__desc .links button:active,
+.other-projects__proj .links a:active,
+.contact-button:not(:disabled):active {
+  background-color: var(--orange);
 }
 
 /* Footer */
