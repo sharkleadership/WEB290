@@ -21,6 +21,7 @@
     <body>
         <div class="wrapper">
             <header class="header full-bleed">
+                <a href="https://github.com/sharkleadership" class="nav__github"><img src="./assets/images/github-mark-white.svg" alt="Link to sharkleadership's GitHub profile."></a>
                 <h1 class="JM-logo" title="<JM>">
                     <!-- &lt;JM&gt; -->
                     <svg
@@ -79,7 +80,7 @@
                     <!-- Embed menu in label so it closes? -->
                 </nav>
             </header>
-            <main>
+            <main id="top">
                 <section id="hero" class="hero full-bleed">
                     <div class="three-d-face">
                         <div id="egghead-headset"></div>
@@ -465,7 +466,6 @@
             </main>
             <footer class="footer full-bleed">
                 <nav>
-                    <a href="https://github.com/sharkleadership" class="nav__github"><img src="./assets/images/github-mark-white.svg" alt="Link to sharkleadership's GitHub profile."></a>
                     <div class="JM-logo" title="<JM>">
                         <svg
                             viewBox="0 0 67.733329 20.720588"
@@ -505,19 +505,7 @@
                                 class="JM-logo__gt" />
                         </svg>
                     </div>
-                    <label for="hamburger--footer">
-                        <input type="checkbox" id="hamburger--footer" class="hamburger hamburger--footer">
-                        <div class="hamburger__button" title="Open Menu" role="button" tabindex="0">
-                            <div class="bar bar--top"></div>
-                            <div class="bar bar--middle"></div>
-                            <div class="bar bar--bottom"></div>
-                        </div>
-                        <menu>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#projects">Projects</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </menu>
-                    </label>
+                    <a href="#top" class="back-to-top">Back to Top</a>
                 </nav>
             </footer>
         </div> <!-- end .wrapper -->

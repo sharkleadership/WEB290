@@ -776,7 +776,7 @@ nav menu li:active,
 .footer nav {
   display: flex;
 
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   position: relative;
 }
@@ -792,6 +792,45 @@ nav menu li:active,
 
 .footer .hamburger__button {
   border-radius: 0 0 0 0.5em;
+}
+
+.back-to-top {
+  position: absolute;
+  right: 0.25em;
+
+  text-indent: 5rem;
+  font-size: 1.5rem;
+
+  display: block;
+  width: 2rem;
+  aspect-ratio: 1;
+  padding: 0.25rem;
+
+  background-position: 50% 50%;
+  background-size: 75%;
+  background-repeat: no-repeat;
+  background-image: url("../assets/images/arrow_upward.svg");
+
+  overflow: hidden;
+}
+
+.back-to-top:hover {
+  animation: wiggle 500ms ease-in-out;
+}
+
+@keyframes wiggle {
+  from,
+  to {
+    transform: rotate(0deg);
+  }
+  20%,
+  60% {
+    transform: rotate(10deg);
+  }
+  40%,
+  80% {
+    transform: rotate(-15deg);
+  }
 }
 
 .nav__github {
