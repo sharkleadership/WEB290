@@ -260,6 +260,12 @@ menu {
   transform: scale(1.1) translateY(-0.35em) rotate(-45deg);
 }
 
+menu li > a {
+  display: block;
+  padding: 0.25em 1em 0.25em 1.5em;
+  text-align: center;
+}
+
 menu li > a,
 menu li > a:link,
 menu li > a:visited {
@@ -499,6 +505,9 @@ menu li > a:visited {
   background-color: hsl(from var(--navy-blue) h s l / 0.5);
   padding: 0.5rem;
   scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 
 .projects__desc [class*="project-logo"] {
@@ -513,24 +522,40 @@ menu li > a:visited {
   gap: 0.25em;
 }
 
-.projects__desc .links {
+.projects__desc .info p {
+  margin: 0 auto;
+}
+
+.projects__desc .links,
+.other-projects__proj .links {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1em;
 }
 
-.projects__desc .links a {
+.projects__desc .links a,
+.projects__desc .links button,
+.other-projects__proj .links a {
   background-color: var(--dodgerblue);
   padding: 0.5rem;
   border-radius: 0.25rem;
-  max-width: 2.5rem;
-  max-height: 2.5rem;
+  max-width: 3rem;
+  max-height: 3rem;
+  border: none;
+  cursor: pointer;
+  display: block;
 }
 
-.projects__desc .links a img {
-  min-width: 100%;
-  min-height: 100%;
+.other-projects__proj .links a {
+  max-width: 2rem;
+  max-height: 2rem;
+}
+
+.projects__desc .links img,
+.other-projects__proj .links img {
+  min-width: 2rem;
+  min-height: 2rem;
 }
 
 .projects__desc h3 {
@@ -730,8 +755,8 @@ nav menu li:hover,
   color: var(--navy-blue);
 }
 
-.projects__desc .links *:hover .nav__github {
-  /* CHANGE TO BLACK */
+.links *:hover .nav__github {
+  filter: invert(90%);
 }
 
 nav menu li:active,
@@ -774,8 +799,6 @@ nav menu li:active,
   max-height: 2em;
   aspect-ratio: 1;
   display: block;
-  margin-left: 0.5em;
-  padding: 0.125em;
 }
 
 @media (min-width: 768px) {
@@ -837,6 +860,20 @@ nav menu li:active,
   .projects__desc .picture-container {
     max-height: 80vh;
     max-width: 100%;
+  }
+
+  .projects__desc .info {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .projects__desc .info hgroup {
+    flex-basis: 60%;
+  }
+
+  .projects__desc .info p {
+    flex-basis: 100%;
   }
 
   .projects__desc__hide {
