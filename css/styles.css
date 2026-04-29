@@ -780,13 +780,19 @@ section.contact {
   margin-bottom: 2rem;
 }
 
+.contact > p {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .contact-method-list {
   list-style-type: none;
   padding: 0;
   margin: 0 auto;
   text-align: center;
 
-  max-width: 80%;
+  width: fit-content;
 
   display: flex;
   flex-direction: column;
@@ -797,7 +803,7 @@ section.contact {
 .contact-button,
 button:disabled {
   display: block;
-  padding: 0.75rem 1.25rem;
+  padding: 1em 1.5em;
   background-color: var(--dodgerblue);
   color: var(--navy-blue);
   border-radius: 0.75rem;
@@ -806,11 +812,42 @@ button:disabled {
   min-width: 100%;
 }
 
+.contact-method-list li:has(button:disabled) {
+  position: relative;
+}
+
 button:disabled {
+  opacity: 0.6;
   background-color: hsl(from var(--dodgerblue) h 0 calc(l + 25));
   border: 0.25em hsl(from var(--dodgerblue) h 0 l) solid;
+  padding: 0.75em 1.5em;
   color: var(--navy-blue);
   cursor: not-allowed;
+}
+
+button:disabled ~ a {
+  position: absolute;
+  top: -0.5em;
+  right: -0.5em;
+  font-size: 0.75em;
+  text-underline-offset: -0.25em;
+}
+
+.contact-button--email {
+  padding: 1em 3em;
+}
+
+.contact footer {
+  font-size: 0.75em;
+}
+
+.contact footer p {
+  margin: 0.1em auto;
+}
+
+.contact footer p:target {
+  background-color: var(--yellow);
+  color: var(--navy-blue);
 }
 
 /* Hover/Active */
@@ -1007,12 +1044,6 @@ nav menu li:active,
   .other-projects__proj details:not([open]) summary span {
     max-width: calc(80vw - 4rem);
   }
-
-  /* Contact */
-
-  .contact-method-list {
-    max-width: 12em;
-  }
 }
 
 @media (min-width: 1024px) {
@@ -1119,6 +1150,13 @@ nav menu li:active,
   .other-projects__proj details:not([open]) summary span {
     white-space: initial;
     max-height: calc(1.4 * 3rem);
+  }
+
+  /* Contact */
+
+  .contact-method-list {
+    flex-direction: row;
+    align-items: center;
   }
 }
 
