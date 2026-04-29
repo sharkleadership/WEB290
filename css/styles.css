@@ -311,6 +311,12 @@ menu li:last-of-type:has(a:active) {
   transform: translateX(0);
 }
 
+menu .icon-before--contact::before {
+  background-image: url("../assets/images/icons/hugeicons--contact.svg");
+  filter: brightness(0) saturate(100%) invert(4%) sepia(90%) saturate(2980%)
+    hue-rotate(247deg) brightness(90%) contrast(95%);
+}
+
 /* Hero */
 
 .hero h2 {
@@ -718,22 +724,54 @@ summary::-webkit-details-marker {
 
 /* Icon Before */
 
-.icon-before::before {
+[class*="icon-before"]::before {
   content: " ";
   display: inline-block;
   vertical-align: center;
 
-  width: 1rem;
-  height: 1rem;
+  width: 1.5em;
+  height: 1.5em;
   aspect-ratio: 1;
-  margin-right: 0.125rem;
+  margin-right: 0.25em;
 
   background-size: contain;
   background-repeat: no-repeat;
+  background-image: url("../assets/images/JM-tag-logo.svg");
 }
 
-.icon-before.email::before {
-  background-image: url("../assets/images/email-icon.svg");
+h2[class*="icon-before"]::before {
+  width: 1.2em;
+  height: 1.2em;
+}
+
+.icon-before--about::before {
+  background-image: url("../assets/images/icons/flat-color-icons--about.svg");
+}
+
+.icon-before--projects::before {
+  background-image: url("../assets/images/icons/gcp--projects.svg");
+}
+
+.icon-before--contact::before {
+  background-image: url("../assets/images/icons/hugeicons--contact.svg");
+}
+
+.icon-before--email::before {
+  background-image: url("../assets/images/icons/mdi--email-open.svg");
+  filter: brightness(0) saturate(100%) invert(4%) sepia(90%) saturate(2980%)
+    hue-rotate(247deg) brightness(90%) contrast(95%);
+}
+
+.icon-before--video-response::before {
+  background-image: url("../assets/images/icons/mynaui--video-icon.svg");
+  filter: brightness(0) saturate(100%) invert(4%) sepia(90%) saturate(2980%)
+    hue-rotate(247deg) brightness(90%) contrast(95%);
+}
+
+.icon-before--pigeon::before {
+  background-image: url("../assets/images/icons/noto--dove.svg");
+  filter: brightness(0) saturate(100%) invert(4%) sepia(90%) saturate(2980%)
+    hue-rotate(247deg) brightness(90%) contrast(95%);
 }
 
 /* Contact */
@@ -849,7 +887,7 @@ nav menu li:active,
   background-position: 50% 50%;
   background-size: 75%;
   background-repeat: no-repeat;
-  background-image: url("../assets/images/arrow_upward.svg");
+  background-image: url("../assets/images/icons/arrow_upward.svg");
 
   overflow: hidden;
 }
