@@ -158,6 +158,11 @@ img {
 
 .header:has(.hamburger:checked) {
   background-color: var(--yellow);
+  background-image: linear-gradient(
+    135deg,
+    var(--yellow) 10%,
+    hsl(from var(--yellow) h s calc(l + 5)) 100%
+  );
 }
 
 .header h1 a,
@@ -170,7 +175,7 @@ img {
 }
 
 .header .JM-logo path {
-  transition: stroke 100ms;
+  transition: stroke 100ms ease-out;
 }
 
 .header:has(.hamburger:checked) .JM-logo .JM-logo__lt,
@@ -210,6 +215,11 @@ menu {
   margin: 0;
   border-radius: 0 0 1em 1em;
   background-color: var(--yellow);
+  background-image: linear-gradient(
+    135deg,
+    var(--yellow) 10%,
+    hsl(from var(--yellow) h s calc(l + 5)) 100%
+  );
   box-shadow: 0 0 0.2em 0.05em var(--yellow);
 
   transform: scaleY(0);
@@ -857,7 +867,9 @@ nav menu li,
 .projects__desc .links button,
 .other-projects__proj .links a,
 .contact-button:not(:disabled) {
-  transition: color 200ms ease-out;
+  transition:
+    background-color 50ms ease-out,
+    color 50ms ease-out;
 }
 
 nav menu li:hover,
@@ -1051,6 +1063,13 @@ nav menu li:active,
 
   main {
     grid-template-columns: [left] 1fr [content] 80vw 1fr [right];
+  }
+
+  /* Nav */
+
+  menu {
+    flex-direction: row;
+    justify-content: space-evenly;
   }
 
   /* Hero */
