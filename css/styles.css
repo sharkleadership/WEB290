@@ -321,12 +321,6 @@ menu li:last-of-type:has(a:active) {
   transform: translateX(0);
 }
 
-menu .icon-before--contact::before {
-  background-image: url("../assets/images/icons/hugeicons--contact.svg");
-  filter: brightness(0) saturate(100%) invert(4%) sepia(90%) saturate(2980%)
-    hue-rotate(247deg) brightness(90%) contrast(95%);
-}
-
 /* Hero */
 
 .hero h2 {
@@ -747,6 +741,16 @@ summary::-webkit-details-marker {
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url("../assets/images/JM-tag-logo.svg");
+
+  filter: drop-shadow(
+    0.125em 0.125em 0.25em hsl(from var(--navy-blue) h s l / 0.25)
+  );
+}
+
+[class*="icon-before"][class*="--dark"]::before {
+  filter: brightness(0) saturate(100%) invert(4%) sepia(90%) saturate(2980%)
+    hue-rotate(247deg) brightness(90%) contrast(95%)
+    drop-shadow(0.125em 0.125em 0.25em hsl(from var(--navy-blue) h s l / 0.25));
 }
 
 h2[class*="icon-before"]::before {
@@ -754,34 +758,32 @@ h2[class*="icon-before"]::before {
   height: 1.2em;
 }
 
-.icon-before--about::before {
+[class*="icon-before--about"]::before {
   background-image: url("../assets/images/icons/flat-color-icons--about.svg");
 }
 
-.icon-before--projects::before {
+[class*="icon-before--projects"]::before {
   background-image: url("../assets/images/icons/gcp--projects.svg");
 }
 
-.icon-before--contact::before {
-  background-image: url("../assets/images/icons/hugeicons--contact.svg");
+[class*="icon-before--contact"]::before {
+  background-image: url("../assets/images/icons/fluent-color--book-contacts.svg");
 }
 
-.icon-before--email::before {
+[class*="icon-before--email"]::before {
   background-image: url("../assets/images/icons/mdi--email-open.svg");
-  filter: brightness(0) saturate(100%) invert(4%) sepia(90%) saturate(2980%)
-    hue-rotate(247deg) brightness(90%) contrast(95%);
 }
 
-.icon-before--video-response::before {
+[class*="icon-before--video-response"]::before {
   background-image: url("../assets/images/icons/mynaui--video-icon.svg");
-  filter: brightness(0) saturate(100%) invert(4%) sepia(90%) saturate(2980%)
-    hue-rotate(247deg) brightness(90%) contrast(95%);
 }
 
-.icon-before--pigeon::before {
+[class*="icon-before--pigeon"]::before {
   background-image: url("../assets/images/icons/noto--dove.svg");
-  filter: brightness(0) saturate(100%) invert(4%) sepia(90%) saturate(2980%)
-    hue-rotate(247deg) brightness(90%) contrast(95%);
+}
+
+[class*="icon-before--vote"]::before {
+  background-image: url("../assets/images/icons/fluent--vote.svg");
 }
 
 /* Contact */
