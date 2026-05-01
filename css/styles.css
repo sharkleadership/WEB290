@@ -112,6 +112,12 @@ h6 {
   text-align: center;
 }
 
+section > h2,
+section > h3,
+section > h4 {
+  margin-bottom: 0.5em;
+}
+
 h1 {
   font-size: 2rem;
 }
@@ -287,10 +293,19 @@ menu {
   transform: scale(1.1) translateY(-0.35em) rotate(-45deg);
 }
 
+menu li {
+  flex-grow: 1;
+}
+
 menu li > a {
   display: block;
   padding: 0.25em 1em 0.25em 1.5em;
   text-align: center;
+  text-decoration: none;
+}
+
+menu li > a:hover {
+  text-decoration: underline;
 }
 
 menu li > a,
@@ -300,7 +315,7 @@ menu li > a:visited {
 }
 
 menu li:last-of-type {
-  border-radius: 0 0 1em 1em;
+  border-radius: 0 0 1em 0;
 }
 
 menu li:last-of-type:has(a:active) {
@@ -336,6 +351,7 @@ menu li:last-of-type:has(a:active) {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-shadow: 0 0 0.5em var(--navy-blue);
 }
 
 .three-d-face {
@@ -850,7 +866,8 @@ button:disabled ~ a {
 }
 
 .contact footer {
-  font-size: 0.75em;
+  font-size: 0.6em;
+  margin-top: 2em;
 }
 
 .contact footer p {
@@ -900,6 +917,7 @@ nav menu li:active,
 
 .footer {
   background-color: var(--navy-blue);
+  margin-top: 2rem;
 }
 
 .footer nav {
@@ -1072,6 +1090,10 @@ nav menu li:active,
   menu {
     flex-direction: row;
     justify-content: space-evenly;
+  }
+
+  menu li:first-of-type {
+    border-radius: 0 0 0 1em;
   }
 
   /* Hero */
