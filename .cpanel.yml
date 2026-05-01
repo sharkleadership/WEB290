@@ -8,5 +8,5 @@ deployment:
     - /bin/cp -R css $DEPLOYPATH
     - /bin/cp -R js $DEPLOYPATH
     - /bin/cp -R php $DEPLOYPHP
-    - /bin/cp php/vote.php $DEPLOYPATHPUBLICPHP
+    - /bin/cp ./php/vote.php $DEPLOYPATHPUBLICPHP
     - /bin/cp index.html $DEPLOYPATH
