@@ -110,6 +110,7 @@
                             <li><a href="#about" class="icon-before--about">About</a></li>
                             <li><a href="#projects" class="icon-before--projects">Projects</a></li>
                             <li><a href="#contact" class="icon-before--contact">Contact</a></li>
+                            <li><a href="#vote" class="icon-before--vote--dark">Vote</a></li>
                         </menu>
                     </label>
                 </nav>
@@ -500,6 +501,36 @@
                         <p id="contact__foot--1"><sup>1:</sup> This feature no longer exists? As far as I'm aware, it's been discontinued for at least a decade.</p>
                         <p id="contact__foot--2"><sup>2:</sup> On principle, I will not communicate through carrier pigeons. They know what they did.</p>
                     </footer>
+                </section>
+                <section id="vote" class="vote">
+                    <h2 class="icon-before--vote">Vote</h2>
+                    <p>Voting is a very important act.</p>
+
+                    <p class="question">Dogs or cats?</p>
+
+                    <form action="./index.html" method="POST">
+
+                        <div class="choices">
+                            <label>
+                                <input type="radio" id="choice--1" class="voting-radio" name="choice" value="1">
+                                🐶 Dogs
+                            </label>
+                            <label>
+                                <input type="radio" id="choice--2" class="voting-radio" name="choice" value="2">
+                                🐱 Cats
+                            </label>
+                            <label hidden>
+                                <input type="radio" id="choice--3" class="voting-radio" name="choice" value="3">
+                                👻 Ghosts
+                            </label>
+                            <label hidden>
+                                <input type="radio" id="choice--4" class="voting-radio" name="choice" value="4">
+                                👽 Aliens
+                            </label>
+                        </div> <!-- end .choices -->
+
+                        <input type="submit" class="submit" value="Submit">
+                    </form>
                 </section>
             </main>
             <footer class="footer full-bleed">

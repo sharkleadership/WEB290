@@ -884,6 +884,54 @@ button:disabled ~ a {
   color: var(--navy-blue);
 }
 
+/* Vote! */
+
+.vote form {
+  display: flex;
+  flex-flow: column;
+  gap: 1em;
+}
+
+.voting-radio {
+  display: none;
+}
+
+.choices {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: stretch;
+  gap: 1em;
+}
+
+.choices label {
+  flex-basis: auto;
+  padding: 2em;
+  border-radius: 0.5em;
+  /* border: .125em solid var(--dodgerblue); */
+  background-color: var(--dodgerblue);
+  color: var(--navy-blue);
+  text-align: center;
+  cursor: pointer;
+}
+
+.choices label:has(input:checked) {
+  background-color: var(--orange);
+}
+
+.vote input[type="submit"] {
+  display: block;
+  padding: 1rem 2.5rem;
+  background-color: var(--dodgerblue);
+  color: var(--navy-blue);
+  border: none;
+  border-radius: 0.75rem;
+  text-decoration: none;
+  font-size: 0.8rem;
+  align-self: center;
+  cursor: pointer;
+}
+
 /* Hover/Active */
 
 nav menu li,
@@ -1080,6 +1128,18 @@ nav menu li:active,
 
   .other-projects__proj details:not([open]) summary span {
     max-width: calc(80vw - 4rem);
+  }
+
+  /* Vote! */
+
+  .choices {
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .choices label {
+    flex-basis: calc(50% - 1em);
   }
 }
 
