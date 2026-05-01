@@ -2,11 +2,8 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/qcczxjxq/public_html/
-    - export DEPLOYPATHPUBLICPHP=/home/qcczxjxq/public_html/php/
-    - export DEPLOYPHP=/home/qcczxjxq/php/
     - /bin/cp -R assets $DEPLOYPATH
     - /bin/cp -R css $DEPLOYPATH
     - /bin/cp -R js $DEPLOYPATH
-    - /bin/cp -R php $DEPLOYPHP
-    - /bin/cp ./php/vote.php $DEPLOYPATHPUBLICPHP
+    - /bin/cp php/vote.php $DEPLOYPATH
     - /bin/cp index.html $DEPLOYPATH
