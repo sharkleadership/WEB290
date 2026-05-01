@@ -360,7 +360,7 @@ menu li:last-of-type:has(a:active) {
   max-width: 10em;
 }
 
-#egghead-headset {
+.p5-sketch-container {
   display: contents;
 }
 
@@ -440,10 +440,6 @@ menu li:last-of-type:has(a:active) {
   width: fit-content;
   max-width: 10em;
   margin: 0 auto;
-}
-
-#rubiks-cube {
-  display: contents;
 }
 
 /* Projects */
@@ -627,17 +623,26 @@ menu li:last-of-type:has(a:active) {
   font-size: 1.25em;
 }
 
-#JMdev-droste-container {
+.projects__picture--droste {
   position: relative;
-  border: 0.25em solid var(--dodgerblue);
+  border: 5vw inset hsl(from var(--navy-blue) h s calc(l - 5));
   aspect-ratio: 9 / 16;
-  /* object-fit: contain; */
-  /* object-position: 0% 0%; */
   height: calc(100vh - (1.4 * 1rem) - var(--header-height));
   width: auto;
 }
 
-#disable-iframe-clicks {
+div:has(.droste-final-image) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.droste-final-image {
+  width: 50%;
+  opacity: 0.8;
+}
+
+.disable-iframe-clicks {
   position: absolute;
   z-index: 1000;
   width: 100%;
@@ -1021,7 +1026,7 @@ nav menu li:active,
     width: auto;
   }
 
-  #JMdev-droste-container {
+  .projects__picture--droste {
     aspect-ratio: 3 / 4;
     height: calc(calc(100vh - (1.4 * 2rem) - var(--header-height)));
     width: auto;
@@ -1137,7 +1142,8 @@ nav menu li:active,
     width: 100%;
   }
 
-  #JMdev-droste-container {
+  .projects__picture--droste {
+    border-width: 3vw;
     aspect-ratio: 16 / 9;
     height: auto;
     width: 80vw;
@@ -1205,6 +1211,20 @@ nav menu li:active,
 
 @media (min-width: 1440px) {
   /* Projects */
+
+  .projects__desc {
+    max-height: 90vh;
+    max-width: 80vw;
+  }
+
+  .projects__picture--droste {
+    width: 75vw;
+    border-width: 2.5vw;
+  }
+
+  .projects__desc .projects__picture:last-child {
+    max-width: calc(100vw - (1.4 * 19.5rem) - var(--header-height));
+  }
 
   /* Remove picture elements that do not have content */
   .kcdr-desc picture:nth-of-type(4),
