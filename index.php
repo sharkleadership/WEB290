@@ -1,10 +1,48 @@
-<!DOCTYPE html>
-<!-- JM, 03/11/2026 -->
+<?php
+    if (!empty($_POST['choice'])) {
+        $dev = true;
+        require_once('../../../php/database.php');
+        $user_choice = (int) htmlspecialchars($_POST['choice']);
+        $poll_num = 1;
+        $select = "SELECT * FROM vote
+                   WHERE id = $poll_num";
+        $row = $pdo->query($select)->fetchAll()[0];
+        if (!is_null($row["tally{$user_choice}"])) {
+            $update = "UPDATE vote 
+                       SET tally{$user_choice} = tally{$user_choice} + 1 
+                       WHERE id = $poll_num;";
+            $pdo->exec($update);
+        }
+        $row["tally{$user_choice}"] += 1;
+        $choices = explode(",", $row['choices']);
+        $tallies = [];
+        $i = 0;
+        foreach ($row as $col => $val) {
+            if (!str_contains($col, 'tally'))
+                continue;
+            if (empty($val))
+                continue;
+            $tallies[$i] = [ 'tally' => $val ];
+            array_push($tallies['numbers'], $val);
+            $i++;
+        }
+        $i = 0;
+        foreach ($choices as $choice) {
+            $tallies[$i]['choice'] = $choice;
+            $i++;
+        }
+
+        $tally_sum = array_sum($tallies['numbers']);
+        $tally_max = max($tallies['numbers']);
+        // $tally_min = min($tallies['numbers']);
+    }
+?><!DOCTYPE html>
+<!-- JM, 05/05/2026 -->
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>&lt;JM&gt;</title>
+        <title>&lt;JM&gt; - Home</title>
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -504,33 +542,49 @@
                 </section>
                 <section id="vote" class="vote">
                     <h2 class="icon-before--vote">Vote</h2>
-                    <p>Voting is a very important act.</p>
+                    <p>Voting is a very important act. Whether it is for public office, or even just what to get for dinner tonight, having your voice heard is crucial.</p>
 
                     <p class="question">Dogs or cats?</p>
 
-                    <form action="./php/vote.php" method="POST">
+                    <?php if (empty($_POST['choice'])) { ?>
+                        <form action="<?=$_SERVER["PHP_SELF"]?>" method="POST">
 
-                        <div class="choices">
-                            <label>
-                                <input type="radio" id="choice--1" class="voting-radio" name="choice" value="1">
-                                🐶 Dogs
-                            </label>
-                            <label>
-                                <input type="radio" id="choice--2" class="voting-radio" name="choice" value="2">
-                                🐱 Cats
-                            </label>
-                            <label hidden>
-                                <input type="radio" id="choice--3" class="voting-radio" name="choice" value="3">
-                                👻 Ghosts
-                            </label>
-                            <label hidden>
-                                <input type="radio" id="choice--4" class="voting-radio" name="choice" value="4">
-                                👽 Aliens
-                            </label>
-                        </div> <!-- end .choices -->
+                            <div class="choices">
+                                <label>
+                                    <input type="radio" id="choice--1" class="voting-radio" name="choice" value="1">
+                                    🐶 Dogs
+                                </label>
+                                <label>
+                                    <input type="radio" id="choice--2" class="voting-radio" name="choice" value="2">
+                                    🐱 Cats
+                                </label>
+                                <label hidden>
+                                    <input type="radio" id="choice--3" class="voting-radio" name="choice" value="3">
+                                </label>
+                                <label hidden>
+                                    <input type="radio" id="choice--4" class="voting-radio" name="choice" value="4">
+                                </label>
+                            </div> <!-- end .choices -->
 
-                        <input type="submit" class="submit" value="Submit">
-                    </form>
+                            <input type="submit" class="submit" value="Submit">
+                        </form>
+                        <footer>
+                            <p>Privacy is incredibly important. Your vote is confidential.</p>
+                        </footer>
+                    <?php } else { ?>
+                        <figure class="vote-graph">
+                            <?php 
+                                for ($i = 0; $i < $num_choices; $i++) {
+                                    $tally = $tallies[$i];
+                            ?>
+                                <div class="vote-graph__bar<?= ($tally['tally'] == $tally_max) ? 'winning' : '' ?>" 
+                                style="--tally: <?=(($tally['tally'] / $tally_sum) * 100)?>%;" 
+                                data-choice="<?=$tally['choice']?>" 
+                                data-tally="<?=$tally['tally']?>">
+                                </div>
+                            <?php } ?>
+                        </figure>
+                    <?php } ?>
                 </section>
             </main>
             <footer class="footer full-bleed">
