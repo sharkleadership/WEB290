@@ -1,7 +1,6 @@
 <?php
     if (!empty($_POST['choice'])) {
         $dev = true;
-<<<<<<< HEAD
         require_once('../../php/database.php');
         $user_choice = (int) htmlspecialchars($_POST['choice']);
         $poll_num = 1;
