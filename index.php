@@ -15,7 +15,7 @@
         }
         $row["tally{$user_choice}"] += 1;
         $choices = explode(",", $row['choices']);
-        $tallies = [];
+        $tallies = ['numbers' => []];
         $i = 0;
         foreach ($row as $col => $val) {
             if (!str_contains($col, 'tally'))
@@ -31,6 +31,7 @@
             $tallies[$i]['choice'] = $choice;
             $i++;
         }
+        $num_choices = $i;
 
         $tally_sum = array_sum($tallies['numbers']);
         $tally_max = max($tallies['numbers']);
@@ -547,7 +548,7 @@
                     <p class="question">Dogs or cats?</p>
 
                     <?php if (empty($_POST['choice'])) { ?>
-                        <form action="<?=$_SERVER["PHP_SELF"]?>" method="POST">
+                        <form action="<?=$_SERVER["PHP_SELF"]?>#vote" method="POST">
 
                             <div class="choices">
                                 <label>
@@ -573,11 +574,12 @@
                         </footer>
                     <?php } else { ?>
                         <figure class="vote-graph">
+                            <hr class="plurality" style="--plurality: <?=(100 / $num_choices)?>%;">
                             <?php 
                                 for ($i = 0; $i < $num_choices; $i++) {
                                     $tally = $tallies[$i];
                             ?>
-                                <div class="vote-graph__bar<?= ($tally['tally'] == $tally_max) ? 'winning' : '' ?>" 
+                                <div class="vote-graph__bar<?= ($tally['tally'] == $tally_max) ? ' winning' : '' ?>" 
                                 style="--tally: <?=(($tally['tally'] / $tally_sum) * 100)?>%;" 
                                 data-choice="<?=$tally['choice']?>" 
                                 data-tally="<?=$tally['tally']?>">
