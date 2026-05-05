@@ -137,7 +137,8 @@ h4 {
 p,
 a,
 span,
-button {
+button,
+label {
   font-family: "Ubuntu", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -932,6 +933,46 @@ button:disabled ~ a {
   cursor: pointer;
 }
 
+.vote-graph {
+  border-bottom: 0.125em solid var(--white);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  height: 10rem;
+  margin: 3rem auto 1.5rem;
+}
+
+.vote-graph__bar {
+  background-color: var(--dodgerblue);
+  height: var(--tally);
+  min-width: 2rem;
+  position: relative;
+  font-family: "Ubuntu", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.vote-graph__bar.winning {
+  background-color: var(--orange);
+}
+
+.vote-graph__bar::before {
+  content: attr(data-choice);
+  display: block;
+  position: absolute;
+  top: 0;
+  transform: translateY(-2.5rem) rotate(-50deg);
+}
+
+.vote-graph__bar::after {
+  display: block;
+  content: attr(data-tally);
+  position: absolute;
+  bottom: 0;
+  transform: translateY(1.5rem);
+  text-align: center;
+  width: 100%;
+}
+
 /* Hover/Active */
 
 nav menu li,
@@ -1266,6 +1307,13 @@ nav menu li:active,
   .contact-method-list {
     flex-direction: row;
     align-items: center;
+  }
+
+  /* Vote! */
+
+  .vote {
+    max-width: 90%;
+    margin: 0 auto;
   }
 }
 
