@@ -99,16 +99,30 @@
         <div class="wrapper">
             <header class="header full-bleed">
                 <nav>
-                    <a href="https://github.com/sharkleadership" class="nav__github"><img src="./assets/images/icons/github-mark-white.svg" alt="Link to sharkleadership's GitHub profile."></a>
-                    <h1 class="JM-logo" title="<JM>">
-                        <a href="./index.html">
-                            <!-- &lt;JM&gt; -->
+                    <label for="hamburger--header">
+                        <input type="checkbox" id="hamburger--header" class="hamburger hamburger--header">
+                        <div class="hamburger__button" aria-label="Open Menu" role="button" tabindex="0">
+                            <div class="bar bar--top"></div> <!-- end .bar -->
+                            <div class="bar bar--middle"></div> <!-- end .bar -->
+                            <div class="bar bar--bottom"></div> <!-- end .bar -->
+                        </div> <!-- end .hamburger__button -->
+                        <menu>
+                            <li><a href="#about" class="icon-before--about">About</a></li>
+                            <li><a href="#projects" class="icon-before--projects">Projects</a></li>
+                            <li><a href="#contact" class="icon-before--contact">Contact</a></li>
+                            <li><a href="#vote" class="icon-before--vote--dark">Vote</a></li>
+                        </menu>
+                    </label>
+                    <h1 class="JM-logo">
+                        <a href="<?=$_SERVER['PHP_SELF']?>" tabindex="0">
                             <svg
                                 viewBox="0 0 67.733329 20.720588"
                                 version="1.1"
                                 id="JM-logo"
                                 xmlns="http://www.w3.org/2000/svg"
-                                xmlns:svg="http://www.w3.org/2000/svg">
+                                xmlns:svg="http://www.w3.org/2000/svg"
+                                role="img"
+                                aria-label="<JM> logo.">
                                 <g
                                     id="jm"
                                     class="JM-logo__jm-group"
@@ -143,20 +157,7 @@
                             <!-- Tokenize SVG for optimization -->
                         </a>
                     </h1>
-                    <label for="hamburger--header">
-                        <input type="checkbox" id="hamburger--header" class="hamburger hamburger--header">
-                        <div class="hamburger__button" title="Open Menu" role="button" tabindex="0">
-                            <div class="bar bar--top"></div> <!-- end .bar -->
-                            <div class="bar bar--middle"></div> <!-- end .bar -->
-                            <div class="bar bar--bottom"></div> <!-- end .bar -->
-                        </div> <!-- end .hamburger__button -->
-                        <menu>
-                            <li><a href="#about" class="icon-before--about">About</a></li>
-                            <li><a href="#projects" class="icon-before--projects">Projects</a></li>
-                            <li><a href="#contact" class="icon-before--contact">Contact</a></li>
-                            <li><a href="#vote" class="icon-before--vote--dark">Vote</a></li>
-                        </menu>
-                    </label>
+                    <a href="https://github.com/sharkleadership" class="nav__github"><img src="./assets/images/icons/github-mark-white.svg" alt="Link to sharkleadership's GitHub profile."></a>
                 </nav>
             </header>
             <main id="top">
@@ -193,12 +194,14 @@
                 <section id="about" class="about">
                     <h2 class="icon-before--about">About</h2>
                     <p>
-                        Hello, I am <span class="JM-logo" title="<JM>"><svg
+                        Hello, I am <span class="JM-logo"><svg
                                 viewBox="0 0 67.733329 20.720588"
                                 version="1.1"
                                 id="JM-logo"
                                 xmlns="http://www.w3.org/2000/svg"
-                                xmlns:svg="http://www.w3.org/2000/svg">
+                                xmlns:svg="http://www.w3.org/2000/svg"
+                                role="img"
+                                aria-label="<JM>">
                                 <g
                                     id="jm"
                                     class="JM-logo__jm-group"
@@ -229,7 +232,8 @@
                                     d="m 57.938471,3.2348672 c 3.125037,1.9370882 5.222618,4.7827552 8.43598,6.8733838 -3.213326,2.061802 -5.63678,4.574962 -8.43598,6.87341"
                                     id="gt"
                                     class="JM-logo__gt" />
-                            </svg></span>. I started programming at a young age, inspired in part by Flash (may it rest in peace) and HTML5 games.
+                            </svg></span>. 
+                        I started programming at a young age, inspired in part by Flash (may it rest in peace) and HTML5 games.
                     </p>
                     <div class="media">
                         <div class="rubiks-cube-container">
@@ -266,7 +270,7 @@
                                     <h3>LanguageBox</h3>
                                 </button>
                                 <dialog class="projects__desc languagebox-desc" id="languagebox-desc" popover>
-                                    <button popovertarget="languagebox-desc" popovertargetaction="hide" class="projects__desc__hide" title="Close">
+                                    <button popovertarget="languagebox-desc" popovertargetaction="hide" class="projects__desc__hide" aria-label="Close">
                                         <span class="bar bar--left"></span>
                                         <span class="bar bar--right"></span>
                                     </button>
@@ -339,7 +343,7 @@
                                     <h3>jeremymeyers<wbr>.dev</h3>
                                 </button>
                                 <dialog class="projects__desc JMdev-desc" id="JMdev-desc" popover>
-                                    <button popovertarget="JMdev-desc" popovertargetaction="hide" class="projects__desc__hide" title="Close">
+                                    <button popovertarget="JMdev-desc" popovertargetaction="hide" class="projects__desc__hide" aria-label="Close">
                                         <span class="bar bar--left"></span>
                                         <span class="bar bar--right"></span>
                                     </button>
@@ -447,7 +451,7 @@
                                     <h3>Kansas City Doberman Rescue</h3>
                                 </button>
                                 <dialog class="projects__desc kcdr-desc" id="kcdr-desc" popover>
-                                    <button popovertarget="kcdr-desc" popovertargetaction="hide" class="projects__desc__hide" title="Close">
+                                    <button popovertarget="kcdr-desc" popovertargetaction="hide" class="projects__desc__hide" aria-label="Close">
                                         <span class="bar bar--left"></span>
                                         <span class="bar bar--right"></span>
                                     </button>
@@ -599,18 +603,18 @@
                         <form action="<?=$_SERVER["PHP_SELF"]?>#vote" method="POST">
 
                             <div class="choices">
-                                <label>
+                                <label tabindex="0">
                                     <input type="radio" id="choice--1" class="voting-radio" name="choice" value="1">
                                     🐶 Dogs
                                 </label>
-                                <label>
+                                <label tabindex="0">
                                     <input type="radio" id="choice--2" class="voting-radio" name="choice" value="2">
                                     🐱 Cats
                                 </label>
-                                <label hidden>
+                                <label tabindex="0" hidden>
                                     <input type="radio" id="choice--3" class="voting-radio" name="choice" value="3">
                                 </label>
-                                <label hidden>
+                                <label tabindex="0" hidden>
                                     <input type="radio" id="choice--4" class="voting-radio" name="choice" value="4">
                                 </label>
                             </div> <!-- end .choices -->
@@ -645,13 +649,15 @@
                 </section>
             </main>
             <footer class="footer full-bleed">
-                <div class="JM-logo" title="<JM>">
+                <div class="JM-logo">
                     <svg
                         viewBox="0 0 67.733329 20.720588"
                         version="1.1"
                         id="JM-logo"
                         xmlns="http://www.w3.org/2000/svg"
-                        xmlns:svg="http://www.w3.org/2000/svg">
+                        xmlns:svg="http://www.w3.org/2000/svg"
+                        role="img"
+                        aria-label="<JM> logo.">
                         <g
                             id="jm"
                             class="JM-logo__jm-group"

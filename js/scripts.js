@@ -86,6 +86,7 @@ let inception = new Inception({
 
 inception.onload = function() {
     this.iframes[0].tabIndex = -1;
+    this.iframes[0].title = "A droste example of jeremymeyers.dev.";
     let baseFontSize = 20;
     for (let iframe of this.iframes) {
         iframe.contentDocument.children[0].style.fontSize = `${baseFontSize}px`;
