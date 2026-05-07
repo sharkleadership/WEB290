@@ -1126,6 +1126,7 @@ nav menu li:active,
   .projects__picture--droste {
     aspect-ratio: 3 / 4;
     height: calc(calc(100vh - (1.4 * 2rem) - var(--header-height)));
+    max-width: 92.5vw;
     width: auto;
   }
 
@@ -1134,13 +1135,13 @@ nav menu li:active,
     max-width: calc(100vw - 2em);
   }
 
-  .projects__desc picture {
-    max-width: 90%;
-  }
-
   .projects__desc .picture-container {
     max-height: 80vh;
     max-width: 100%;
+  }
+
+  .projects__desc picture {
+    max-width: 90%;
   }
 
   .projects__desc .info {
@@ -1163,6 +1164,8 @@ nav menu li:active,
   }
 
   /* Remove picture elements that do not have content */
+  .JMdev-desc picture:nth-of-type(8),
+  .JMdev-desc picture:nth-of-type(9),
   .kcdr-desc picture:nth-of-type(4),
   .kcdr-desc picture:nth-of-type(5) {
     display: none;
@@ -1233,8 +1236,6 @@ nav menu li:active,
 
   /* Projects */
 
-  /* Projects section */
-
   .projects__card {
     aspect-ratio: 16 / 9;
     margin: 4rem auto;
@@ -1274,6 +1275,9 @@ nav menu li:active,
   }
 
   /* Readd picture elements that do have content */
+  .JMdev-desc picture:nth-of-type(8),
+  .JMdev-desc picture:nth-of-type(9),
+  .JMdev-desc picture:nth-of-type(10),
   .kcdr-desc picture:nth-of-type(4),
   .kcdr-desc picture:nth-of-type(5) {
     display: block;
@@ -1328,21 +1332,24 @@ nav menu li:active,
 @media (min-width: 1440px) {
   /* Projects */
 
+  .projects__picture--droste {
+    width: 80vw;
+    border-width: 2.5vw;
+  }
+
   .projects__desc {
     max-height: 90vh;
     max-width: 80vw;
   }
 
-  .projects__picture--droste {
-    width: 75vw;
-    border-width: 2.5vw;
-  }
-
   .projects__desc .projects__picture:last-child {
-    max-width: calc(100vw - (1.4 * 19.5rem) - var(--header-height));
+    max-width: calc(100vw - (1.4 * 11rem) - var(--header-height));
   }
 
   /* Remove picture elements that do not have content */
+  .JMdev-desc picture:nth-of-type(8),
+  .JMdev-desc picture:nth-of-type(9),
+  .JMdev-desc picture:nth-of-type(10),
   .kcdr-desc picture:nth-of-type(4),
   .kcdr-desc picture:nth-of-type(5) {
     display: none;

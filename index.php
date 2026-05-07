@@ -293,7 +293,7 @@
                                             <img class="projects__picture" src="./assets/images/projects/languagebox/languagebox_Mobile_01.png" alt="Example of the website LanguageBox." height="1592" width="896">
                                         </picture>
                                         <picture>
-                                            <source srcset="./" media="(width >= 1024px)">
+                                            <source srcset="" media="(width >= 1024px)">
                                             <source srcset="./assets/images/projects/languagebox/languagebox_Tablet_04.png" media="(width >= 768px)" height="696" width="1536">
                                             <source srcset="./assets/images/projects/languagebox/languagebox_Mobile_04.png" media="(width < 768px)" height="804" width="896">
                                             <img class="projects__picture" src="./assets/images/projects/languagebox/languagebox_Mobile_01.png" alt="Example of the website LanguageBox.">
@@ -329,11 +329,11 @@
                                     </div> <!-- end #JM-droste-container.projects__picture--droste -->
                                     <noscript>
                                         <picture>
-                                            <source srcset="./assets/images/" media="(width >= 1440px)" height="1620" width="2880">
-                                            <source srcset="./assets/images/" media="(width >= 1024px)" height="1152" width="2048">
-                                            <source srcset="./assets/images/" media="(width >= 768px)" height="2048" width="1536">
-                                            <source srcset="./assets/images/" media="(width < 768px)" height="1592" width="896">
-                                            <img class="projects__picture" src="./assets/images/" alt="Example of the website jeremymeyers.dev." height="1592" width="896">
+                                            <source srcset="./assets/images/projects/droste/jmdev-DesktopXL_01.png" media="(width >= 1440px)" height="1620" width="2880">
+                                            <source srcset="./assets/images/projects/droste/jmdev-Desktop_01.png" media="(width >= 1024px)" height="1152" width="2048">
+                                            <source srcset="./assets/images/projects/droste/jmdev-Tablet_01.png" media="(width >= 768px)" height="2048" width="1536">
+                                            <source srcset="./assets/images/projects/droste/jmdev-Mobile_01.png" media="(width < 768px)" height="1333" width="750">
+                                            <img class="projects__picture" src="./assets/images/projects/droste/jmdev-Mobile_01.png" alt="Example of the website jeremymeyers.dev." height="1333" width="750">
                                         </picture>
                                     </noscript>
                                     <h3>jeremymeyers<wbr>.dev</h3>
@@ -345,36 +345,79 @@
                                     </button>
                                     <div class="picture-container">
                                         <picture>
-                                            <source srcset="./assets/images/projects/languagebox/languagebox_DesktopXL_01.png" media="(width >= 1440px)" height="1620" width="2880">
-                                            <source srcset="./assets/images/projects/languagebox/languagebox_Desktop_01.png" media="(width >= 1024px)" height="1152" width="2048">
-                                            <source srcset="./assets/images/projects/languagebox/languagebox_Tablet_01.png" media="(width >= 768px)" height="2048" width="1536">
-                                            <source srcset="./assets/images/projects/languagebox/languagebox_Mobile_01.png" media="(width < 768px)" height="1592" width="896">
-                                            <img class="projects__picture" src="./assets/images/projects/languagebox/languagebox_Mobile_01.png" alt="Example of the website LanguageBox." height="1592" width="896">
+                                            <source srcset="./assets/images/projects/droste/jmdev-DesktopXL_01.png" media="(width >= 1440px)" height="1620" width="2880">
+                                            <source srcset="./assets/images/projects/droste/jmdev-Desktop_01.png" media="(width >= 1024px)" height="1152" width="2048">
+                                            <source srcset="./assets/images/projects/droste/jmdev-Tablet_01.png" media="(width >= 768px)" height="2048" width="1536">
+                                            <source srcset="./assets/images/projects/droste/jmdev-Mobile_01.png" media="(width < 768px)" height="1333" width="750">
+                                            <img class="projects__picture" src="./assets/images/projects/droste/jmdev-Mobile_01.png" alt="Example of the website jeremymeyers.dev." height="1333" width="750">
                                         </picture>
                                         <picture>
-                                            <source srcset="./assets/images/projects/languagebox/languagebox_DesktopXL_02.png" media="(width >= 1440px)" height="1620" width="2880">
-                                            <source srcset="./assets/images/projects/languagebox/languagebox_Desktop_02.png" media="(width >= 1024px)" height="1152" width="2048">
-                                            <source srcset="./assets/images/projects/languagebox/languagebox_Tablet_02.png" media="(width >= 768px)" height="2048" width="1536">
-                                            <source srcset="./assets/images/projects/languagebox/languagebox_Mobile_02.png" media="(width < 768px)" height="1592" width="896">
-                                            <img class="projects__picture" src="./assets/images/projects/languagebox/languagebox_Mobile_01.png" alt="Example of the website LanguageBox." height="1592" width="896">
+                                            <source srcset="./assets/images/projects/droste/jmdev-DesktopXL_02.png" media="(width >= 1440px)" height="1620" width="2880">
+                                            <source srcset="./assets/images/projects/droste/jmdev-Desktop_02.png" media="(width >= 1024px)" height="1152" width="2048">
+                                            <source srcset="./assets/images/projects/droste/jmdev-Tablet_02.png" media="(width >= 768px)" height="2048" width="1536">
+                                            <source srcset="./assets/images/projects/droste/jmdev-Mobile_02.png" media="(width < 768px)" height="1333" width="750">
+                                            <img class="projects__picture" src="./assets/images/projects/droste/jmdev-Mobile_02.png" alt="Example of the website jeremymeyers.dev." height="1333" width="750">
                                         </picture>
                                         <picture>
-                                            <source srcset="./assets/images/projects/languagebox/languagebox_DesktopXL_03.png" media="(width >= 1440px)" height="1620" width="2880">
-                                            <source srcset="./assets/images/projects/languagebox/languagebox_Desktop_03.png" media="(width >= 1024px)" height="1152" width="2048">
-                                            <source srcset="./assets/images/projects/languagebox/languagebox_Tablet_03.png" media="(width >= 768px)" height="2048" width="1536">
-                                            <source srcset="./assets/images/projects/languagebox/languagebox_Mobile_03.png" media="(width < 768px)" height="1592" width="896">
-                                            <img class="projects__picture" src="./assets/images/projects/languagebox/languagebox_Mobile_01.png" alt="Example of the website LanguageBox." height="1592" width="896">
+                                            <source srcset="./assets/images/projects/droste/jmdev-DesktopXL_03.png" media="(width >= 1440px)" height="1620" width="2880">
+                                            <source srcset="./assets/images/projects/droste/jmdev-Desktop_03.png" media="(width >= 1024px)" height="1152" width="2048">
+                                            <source srcset="./assets/images/projects/droste/jmdev-Tablet_03.png" media="(width >= 768px)" height="2048" width="1536">
+                                            <source srcset="./assets/images/projects/droste/jmdev-Mobile_03.png" media="(width < 768px)" height="1333" width="750">
+                                            <img class="projects__picture" src="./assets/images/projects/droste/jmdev-Mobile_03.png" alt="Example of the website jeremymeyers.dev." height="1333" width="750">
                                         </picture>
                                         <picture>
-                                            <source srcset="./" media="(width >= 1024px)">
-                                            <source srcset="./assets/images/projects/languagebox/languagebox_Tablet_04.png" media="(width >= 768px)" height="696" width="1536">
-                                            <source srcset="./assets/images/projects/languagebox/languagebox_Mobile_04.png" media="(width < 768px)" height="804" width="896">
-                                            <img class="projects__picture" src="./assets/images/projects/languagebox/languagebox_Mobile_01.png" alt="Example of the website LanguageBox.">
+                                            <source srcset="./assets/images/projects/droste/jmdev-DesktopXL_04.png" media="(width >= 1440px)" height="1620" width="2880">
+                                            <source srcset="./assets/images/projects/droste/jmdev-Desktop_04.png" media="(width >= 1024px)" height="1152" width="2048">
+                                            <source srcset="./assets/images/projects/droste/jmdev-Tablet_04.png" media="(width >= 768px)" height="2048" width="1536">
+                                            <source srcset="./assets/images/projects/droste/jmdev-Mobile_04.png" media="(width < 768px)" height="1333" width="750">
+                                            <img class="projects__picture" src="./assets/images/projects/droste/jmdev-Mobile_04.png" alt="Example of the website jeremymeyers.dev." height="1333" width="750">
+                                        </picture>
+                                        <picture>
+                                            <source srcset="./assets/images/projects/droste/jmdev-DesktopXL_05.png" media="(width >= 1440px)" height="1620" width="2880">
+                                            <source srcset="./assets/images/projects/droste/jmdev-Desktop_05.png" media="(width >= 1024px)" height="1152" width="2048">
+                                            <source srcset="./assets/images/projects/droste/jmdev-Tablet_05.png" media="(width >= 768px)" height="2048" width="1536">
+                                            <source srcset="./assets/images/projects/droste/jmdev-Mobile_05.png" media="(width < 768px)" height="1333" width="750">
+                                            <img class="projects__picture" src="./assets/images/projects/droste/jmdev-Mobile_05.png" alt="Example of the website jeremymeyers.dev." height="1333" width="750">
+                                        </picture>
+                                        <picture>
+                                            <source srcset="./assets/images/projects/droste/jmdev-DesktopXL_06.png" media="(width >= 1440px)" height="1620" width="2880">
+                                            <source srcset="./assets/images/projects/droste/jmdev-Desktop_06.png" media="(width >= 1024px)" height="1152" width="2048">
+                                            <source srcset="./assets/images/projects/droste/jmdev-Tablet_06.png" media="(width >= 768px)" height="2048" width="1536">
+                                            <source srcset="./assets/images/projects/droste/jmdev-Mobile_06.png" media="(width < 768px)" height="1333" width="750">
+                                            <img class="projects__picture" src="./assets/images/projects/droste/jmdev-Mobile_06.png" alt="Example of the website jeremymeyers.dev." height="1333" width="750">
+                                        </picture>
+                                        <picture>
+                                            <source srcset="./assets/images/projects/droste/jmdev-DesktopXL_07.png" media="(width >= 1440px)" height="1620" width="2880">
+                                            <source srcset="./assets/images/projects/droste/jmdev-Desktop_07.png" media="(width >= 1024px)" height="1152" width="2048">
+                                            <source srcset="./assets/images/projects/droste/jmdev-Tablet_07.png" media="(width >= 768px)" height="2048" width="1536">
+                                            <source srcset="./assets/images/projects/droste/jmdev-Mobile_07.png" media="(width < 768px)" height="1333" width="750">
+                                            <img class="projects__picture" src="./assets/images/projects/droste/jmdev-Mobile_07.png" alt="Example of the website jeremymeyers.dev." height="1333" width="750">
+                                        </picture>
+                                        <picture>
+                                            <source srcset="" media="(width >= 1440px)">
+                                            <source srcset="./assets/images/projects/droste/jmdev-Desktop_08.png" media="(width >= 1024px)" height="1152" width="2048">
+                                            <source srcset="" media="(width >= 768px)">
+                                            <source srcset="./assets/images/projects/droste/jmdev-Mobile_08.png" media="(width < 768px)" height="1333" width="750">
+                                            <img class="projects__picture" src="./assets/images/projects/droste/jmdev-Mobile_08.png" alt="Example of the website jeremymeyers.dev." height="1333" width="750">
+                                        </picture>
+                                        <picture>
+                                            <source srcset="" media="(width >= 1440px)">
+                                            <source srcset="./assets/images/projects/droste/jmdev-Desktop_09.png" media="(width >= 1024px)" height="1152" width="2048">
+                                            <source srcset="" media="(width >= 768px)">
+                                            <source srcset="./assets/images/projects/droste/jmdev-Mobile_09.png" media="(width < 768px)" height="1333" width="750">
+                                            <img class="projects__picture" src="./assets/images/projects/droste/jmdev-Mobile_09.png" alt="Example of the website jeremymeyers.dev." height="1333" width="750">
+                                        </picture>
+                                        <picture>
+                                            <source srcset="" media="(width >= 1440px)">
+                                            <source srcset="./assets/images/projects/droste/jmdev-Desktop_10.png" media="(width >= 1024px) and (width < 1440px)" height="1152" width="2048">
+                                            <source srcset="" media="(width >= 768px)">
+                                            <source srcset="" media="(width < 768px)">
+                                            <img class="projects__picture" src="./assets/images/projects/droste/jmdev-Mobile_01.png" alt="Example of the website jeremymeyers.dev." height="1333" width="750">
                                         </picture>
                                     </div> <!-- end .picture-container -->
                                     <div class="info">
                                         <hgroup>
-                                            <img src="./assets/images/JM-tag-logo.svg" alt="<JM> logo." class="project-logo--JM">
+                                            <img src="./assets/images/JM-tag-logo-dark.svg" alt="<JM> logo." class="project-logo--JM">
                                             <h3>jeremymeyers<wbr>.dev</h3>
                                         </hgroup>
                                         <div class="links">
@@ -431,16 +474,16 @@
                                             <img class="projects__picture" src="./assets/images/projects/KCDR/KCDR_Mobile_01.png" alt="Example of the website KCDR." height="1592" width="850">
                                         </picture>
                                         <picture>
-                                            <source srcset="./" media="(width >= 1440px)">
+                                            <source srcset="" media="(width >= 1440px)">
                                             <source srcset="./assets/images/projects/KCDR/KCDR_Desktop_04.png" media="(width >= 1024px)" height="1152" width="2048">
-                                            <source srcset="./" media="(width >= 768px)">
+                                            <source srcset="" media="(width >= 768px)">
                                             <source srcset="./assets/images/projects/KCDR/KCDR_Mobile_04.png" media="(width < 768px)" height="1511" width="850">
                                             <img class="projects__picture" src="./assets/images/projects/KCDR/KCDR_Mobile_01.png" alt="Example of the website KCDR.">
                                         </picture>
                                         <picture>
-                                            <source srcset="./" media="(width >= 1440px)">
+                                            <source srcset="" media="(width >= 1440px)">
                                             <source srcset="./assets/images/projects/KCDR/KCDR_Desktop_05.png" media="(width >= 1024px)" height="158" width="2048">
-                                            <source srcset="./" media="(width >= 768px)">
+                                            <source srcset="" media="(width >= 768px)">
                                             <source srcset="./assets/images/projects/KCDR/KCDR_Mobile_05.png" media="(width < 768px)" height="1286" width="850">
                                             <img class="projects__picture" src="./assets/images/projects/KCDR/KCDR_Mobile_01.png" alt="Example of the website KCDR.">
                                         </picture>
