@@ -566,6 +566,10 @@
                                         <h4>Portal: The Movie</h4>
                                         <span>Portal: The Movie is a high-fidelity Figma prototype of a promotional website for a &lpar;currently&rpar; fictional movie.</span>
                                     </summary>
+                                    <div class="links">
+                                        <a href="https://www.figma.com/design/jDsscSunf6mLJ7C27mykco/HFP_F_Portal" title="Link to Portal: The Movie's Figma file."><img src="./assets/images/icons/logos--figma.svg" alt="Figma logo." class="nav__figma"></a>
+                                        <a href="https://www.figma.com/proto/jDsscSunf6mLJ7C27mykco/HFP_F_Portal" title="Link to Portal: The Movie as a prototype."><img src="./assets/images/icons/open-link.svg" alt="Open link."></a>
+                                    </div> <!-- end .links -->
                                     <p>
                                         Portal: The Movie is a high-fidelity Figma prototype of a promotional website for a &lpar;currently&rpar; fictional movie.
                                     </p>
