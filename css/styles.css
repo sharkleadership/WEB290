@@ -49,7 +49,7 @@ body {
   grid-template-columns: [left] auto [content] 1fr auto [right];
   overscroll-behavior: contain;
 
-  background: #0c091b;
+  background: rgba(12, 9, 27, 1);
   background: radial-gradient(
     circle,
     rgba(12, 9, 27, 1) 0%,
@@ -124,7 +124,8 @@ p,
 a,
 span,
 button,
-label {
+label,
+li {
   font-family: "Ubuntu", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -773,6 +774,13 @@ button:disabled ~ a {
 
 /* Vote! */
 
+.vote .question-box {
+  border: 0.125rem solid var(--white);
+  border-radius: 0.25rem;
+  padding: 1em;
+  text-align: center;
+}
+
 .vote form {
   display: flex;
   flex-flow: column;
@@ -818,6 +826,18 @@ input[type="submit"] {
   cursor: pointer;
 }
 
+input[type="submit"]:hover {
+  background-color: var(--yellow);
+  color: var(--navy-blue);
+  border-color: hsl(from var(--yellow) h s calc(l - 30));
+}
+
+input[type="submit"]:active {
+  background-color: var(--orange);
+  color: var(--navy-blue);
+  border-color: transparent;
+}
+
 .vote-graph {
   border-bottom: 0.125em solid var(--white);
   display: flex;
@@ -837,8 +857,25 @@ input[type="submit"] {
   border-radius: 0.5rem 0.5rem 0 0;
 }
 
-.vote-graph__bar.winning {
+.vote-graph__bar.winning,
+.vote-graph__legend__color.winning {
+  background-color: var(--red);
+}
+
+.vote-graph__bar.user-choice,
+.vote-graph__legend__color.user-choice {
   background-color: var(--orange);
+}
+
+.vote-graph__bar.winning.user-choice {
+  background-color: var(--red);
+  background-image: repeating-linear-gradient(
+    125deg,
+    var(--red) 0%,
+    var(--red) 30%,
+    var(--orange) 30%,
+    var(--orange) 60%
+  );
 }
 
 .vote-graph__bar::before {

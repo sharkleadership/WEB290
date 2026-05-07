@@ -14,6 +14,7 @@
             $pdo->exec($update);
         }
         $row["tally{$user_choice}"] += 1;
+
         $choices = explode(",", $row['choices']);
         $tallies = ['numbers' => []];
         $i = 0;
@@ -35,7 +36,6 @@
 
         $tally_sum = array_sum($tallies['numbers']);
         $tally_max = max($tallies['numbers']);
-        // $tally_min = min($tallies['numbers']);
     }
 ?><!DOCTYPE html>
 <!-- JM, 05/06/2026 -->
@@ -591,8 +591,9 @@
                 <section id="vote" class="vote">
                     <h2 class="icon-before--vote">Vote</h2>
                     <p>Voting is a very important act. Whether it is for public office, or even just what to get for dinner tonight, having your voice heard is crucial.</p>
-
-                    <p class="question">Dogs or cats?</p>
+                    
+                    <h3 class="icon-before--question">Question</h3>
+                    <p class="question-box">Dogs or cats?</p>
 
                     <?php if (empty($_POST['choice'])) { ?>
                         <form action="<?=$_SERVER["PHP_SELF"]?>#vote" method="POST">
@@ -617,21 +618,28 @@
                             <input type="submit" class="submit" value="Submit">
                         </form>
                         <footer>
-                            <p>Privacy is incredibly important. Your vote is confidential.</p>
+                            <p>Privacy is crucial in all aspects of life, including voting. Your vote is completely confidential.</p>
                         </footer>
                     <?php } else { ?>
+                        <p>Thank you for participating! Your vote has been cast.</p>
                         <figure class="vote-graph">
                             <hr class="plurality" style="--plurality: <?=(100 / $num_choices)?>%;">
                             <?php 
                                 for ($i = 0; $i < $num_choices; $i++) {
                                     $tally = $tallies[$i];
                             ?>
-                                <div class="vote-graph__bar<?= ($tally['tally'] == $tally_max) ? ' winning' : '' ?>" 
+                                <div class="vote-graph__bar<?= ($tally['tally'] == $tally_max) ? ' winning' : '' ?><?= ($i + 1 == $user_choice) ? ' user-choice' :  '' ?>" 
                                 style="--tally: <?=(($tally['tally'] / $tally_sum) * 100)?>%;" 
                                 data-choice="<?=$tally['choice']?>" 
                                 data-tally="<?=$tally['tally']?>">
                                 </div> <!-- end .vote-graph__bar -->
                             <?php } ?>
+                            <figcaption>
+                                <ul>
+                                    <li><div class="vote-graph__legend winning"></div> <!-- end .vote-graph__legend --> - Leading</li>
+                                    <li><div class="vote-graph__legend user-choice"></div> <!-- end .vote-graph__legend --> - Your Choice</li>
+                                </ul>
+                            </figcaption>
                         </figure>
                     <?php } ?>
                 </section>
