@@ -21,7 +21,7 @@
         foreach ($row as $col => $val) {
             if (!str_contains($col, 'tally'))
                 continue;
-            if (empty($val))
+            if (is_null($val))
                 continue;
             $tallies[$i] = [ 'tally' => $val ];
             array_push($tallies['numbers'], $val);
