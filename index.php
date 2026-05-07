@@ -580,7 +580,7 @@
 
                             <div class="choices">
                                 <label tabindex="0">
-                                    <input type="radio" id="choice--1" class="voting-radio" name="choice" value="1">
+                                    <input type="radio" id="choice--1" class="voting-radio" name="choice" value="1" required>
                                     🐶 Dogs
                                 </label>
                                 <label tabindex="0">
