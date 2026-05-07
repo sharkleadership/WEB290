@@ -80,7 +80,7 @@ hamburgerButtons.forEach((button) => {
 let inception = new Inception({
     iframeContainerId: "JMdev-droste-container",
     levels: 2,
-    classesToRemove: ["header", "footer", "p5-script"],
+    classesToRemove: ["header", "footer", "p5-script", "projects__desc"],
 });
 
 inception.onload = function() {
