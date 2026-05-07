@@ -38,7 +38,7 @@
         $tally_max = max($tallies['numbers']);
     }
 ?><!DOCTYPE html>
-<!-- JM, 05/06/2026 -->
+<!-- JM, 05/07/2026 -->
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -53,7 +53,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Electrolize&family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-        <link rel="preload" href="./assets/fonts/Corporate-Logo-Rounded-Bold-ver3.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="./assets/fonts/corporate-logo-rounded-bold-ver3.woff2" as="font" type="font/woff2" crossorigin>
 
         <link rel="stylesheet" href="./css/styles.css">
         <script src="./js/inception.js"></script>

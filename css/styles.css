@@ -3,9 +3,9 @@
 @font-face {
   font-family: "Corporate-Logo-Rounded-Bold";
   src:
-    url("../assets/fonts/Corporate-Logo-Rounded-Bold-ver3.woff2")
+    url("../assets/fonts/corporate-logo-rounded-bold-ver3.woff2")
       format("woff2"),
-    url("../assets/fonts/Corporate-Logo-Rounded-Bold-ver3.woff") format("woff");
+    url("../assets/fonts/corporate-logo-rounded-bold-ver3.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
