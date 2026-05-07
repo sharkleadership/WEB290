@@ -402,7 +402,7 @@
                                         </hgroup>
                                         <div class="links">
                                             <a href="https://github.com/sharkleadership/WEB290" title="Link to jeremymeyers.dev's GitHub repo."><img src="./assets/images/icons/github-mark-white.svg" alt="GitHub logo." class="nav__github"></a>
-                                            <button popovertarget="JMdev-desc" popovertargetaction="hide" title="Link to jeremymeyers.dev"><img src="./assets/images/icons/material--open-link.svg" alt="Open link."></button>
+                                            <a href="<?=$_SERVER['PHP_SELF']?>" title="Link to jeremymeyers.dev"><img src="./assets/images/icons/material--open-link.svg" alt="Open link."></a>
                                         </div> <!-- end .links -->
                                         <p>
                                             jeremymeyers.dev, affectionately called &lpar;by me&rpar; JMDev, is my portfolio, and coincidentally, the website you are on currently!
