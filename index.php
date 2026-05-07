@@ -604,6 +604,7 @@
                         <p>Thank you for participating! Your vote has been cast.</p>
                         <figure class="vote-graph">
                             <div class="vote-graph__graph">
+                                <div class="plurality" data-majority="<?=round((($tally['tally'] / $tally_sum) * 100), 2)?>%" style="--plurality: <?=round((($tally['tally'] / $tally_sum) * 100), 2)?>%;"></div> <!-- end .plurality -->
                                 <div class="plurality" data-majority="<?=round((100 / $num_choices), 2)?>%" style="--plurality: <?=round((100 / $num_choices), 2)?>%;"></div> <!-- end .plurality -->
                                 <?php
                                     for ($i = 0; $i < $num_choices; $i++) {
