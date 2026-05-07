@@ -85,12 +85,14 @@ let inception = new Inception({
 });
 
 inception.onload = function() {
-    console.log(this.iframes[0]);
     this.iframes[0].tabIndex = -1;
     let baseFontSize = 20;
     for (let iframe of this.iframes) {
-        console.log(iframe.contentDocument.children[0].style);
         iframe.contentDocument.children[0].style.fontSize = `${baseFontSize}px`;
         baseFontSize -= 4;
     };
+    const img = document.createElement("img");
+    img.src = "../assets/images/JM-tag-logo.svg";
+    img.classList.add("droste-final-image");
+    this.iframeContainers[2].appendChild(img);
 }
