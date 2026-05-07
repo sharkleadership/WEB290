@@ -302,7 +302,7 @@ menu li > a:visited {
 }
 
 menu li:last-of-type {
-  border-radius: 0 0 1em 0;
+  border-radius: 0 0 1em 1em;
 }
 
 menu li:last-of-type:has(a:active) {
@@ -929,10 +929,10 @@ input[type="submit"] {
 
 .back-to-top {
   position: absolute;
-  right: 0.25em;
+  right: 0.225rem;
 
-  text-indent: 5rem;
-  font-size: 1.5rem;
+  color: transparent;
+  font-size: 0.1rem;
 
   display: block;
   width: 2rem;
@@ -1227,6 +1227,10 @@ h2[class*="icon-before"]::before {
     border-radius: 0 0 0 1em;
   }
 
+  menu li:last-of-type {
+    border-radius: 0 0 1em 0;
+  }
+
   /* Hero */
 
   .hero {
@@ -1349,6 +1353,10 @@ h2[class*="icon-before"]::before {
 }
 
 @media (min-width: 1440px) {
+  :root {
+    font-size: clamp(1rem, calc(1vw + 0.5rem), 2.5rem);
+  }
+
   /* Projects */
 
   .projects__picture--droste {
