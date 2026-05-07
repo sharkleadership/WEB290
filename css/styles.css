@@ -1200,14 +1200,12 @@ h2[class*="icon-before"]::before {
   .projects__picture {
     aspect-ratio: 3 / 4;
     max-height: calc(calc(100vh - (1.4 * 2rem) - var(--header-height)));
-    width: auto;
   }
 
   .projects__picture--droste {
     aspect-ratio: 3 / 4;
     height: calc(calc(100vh - (1.4 * 2rem) - var(--header-height)));
     max-width: 92.5vw;
-    width: auto;
   }
 
   .projects__desc {
@@ -1215,9 +1213,9 @@ h2[class*="icon-before"]::before {
     max-width: calc(100vw - 2em);
   }
 
-  .projects__desc .picture-container {
-    max-height: 80vh;
-    max-width: 100%;
+  .projects__desc__hide {
+    top: 1em;
+    right: 1em;
   }
 
   .projects__desc picture {
@@ -1230,17 +1228,12 @@ h2[class*="icon-before"]::before {
     justify-content: space-between;
   }
 
-  .projects__desc .info hgroup {
+  .projects__desc hgroup {
     flex-basis: 60%;
   }
 
   .projects__desc .info p {
     flex-basis: 100%;
-  }
-
-  .projects__desc__hide {
-    top: 1em;
-    right: 1em;
   }
 
   /* Remove picture elements that do not have content */
@@ -1302,8 +1295,6 @@ h2[class*="icon-before"]::before {
   .hero {
     gap: 2rem;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
   }
 
   .hero h2 {
@@ -1326,11 +1317,6 @@ h2[class*="icon-before"]::before {
 
   .projects__card {
     aspect-ratio: 16 / 9;
-    margin: 4rem auto;
-  }
-
-  .projects__card:first-of-type {
-    margin-top: 1.5rem;
   }
 
   .projects__picture {
@@ -1382,7 +1368,7 @@ h2[class*="icon-before"]::before {
   }
 
   .other-projects ul li {
-    flex: 1 1 0;
+    flex: 1 1 0%;
   }
 
   .other-projects__proj {
@@ -1399,7 +1385,6 @@ h2[class*="icon-before"]::before {
   [class*="other-project-logo"] {
     max-width: 7rem;
     max-height: 7rem;
-    aspect-ratio: 1;
     border-radius: 0.5rem;
   }
 
@@ -1455,7 +1440,6 @@ h2[class*="icon-before"]::before {
   /* Projects */
 
   .projects__picture--droste {
-    width: 80vw;
     border-width: 2.5vw;
   }
 
