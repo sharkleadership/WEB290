@@ -846,6 +846,10 @@ input[type="submit"]:active {
 	color: var(--navy-blue);
 }
 
+.vote-graph {
+	margin: 0.5rem;
+}
+
 .vote-graph__graph {
 	display: flex;
 	justify-content: space-evenly;
@@ -1257,6 +1261,10 @@ h2[class*="icon-before"]::before {
 
 	.choices label {
 		flex-basis: calc(50% - 1em);
+	}
+
+	.vote-graph {
+		margin: initial;
 	}
 }
 
