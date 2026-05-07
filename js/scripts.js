@@ -75,7 +75,6 @@ hamburgerButtons.forEach((button) => {
     });
 });
 
-
 // Inception
 
 let inception = new Inception({
@@ -96,4 +95,20 @@ inception.onload = function() {
     img.src = "../assets/images/JM-tag-logo.svg";
     img.classList.add("droste-final-image");
     this.iframeContainers[2].appendChild(img);
+}
+
+// Header height
+
+if (inception.numParentsUntilTopWindow === 0) {
+    const header = document.querySelector('.header');
+    const root = document.documentElement;
+
+    const updateHeaderHeight = () => {
+        const height = header.offsetHeight;
+        root.style.setProperty('--header-height', `${height}px`);
+    };
+
+    window.addEventListener('resize', updateHeaderHeight);
+
+    updateHeaderHeight();
 }

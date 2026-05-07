@@ -45,17 +45,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>&lt;JM&gt; - Home</title>
 
-        <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
-        <link rel="manifest" href="./assets/favicon/site.webmanifest">
+        <link rel="manifest" type="application/manifest+json" href="./assets/favicon/site.webmanifest">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Electrolize&family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
         <link rel="preload" href="./assets/fonts/corporate-logo-rounded-bold-ver3.woff2" as="font" type="font/woff2" crossorigin>
 
-        <link rel="stylesheet" href="./css/styles.css">
+        <link rel="stylesheet" type="text/css" href="./css/styles.css">
         <script src="./js/inception.js"></script>
         <script src="./js/p5.min.js" class="p5-script"></script>
 
@@ -102,56 +102,48 @@
                     <label for="hamburger--header">
                         <input type="checkbox" id="hamburger--header" class="hamburger hamburger--header">
                         <div class="hamburger__button" aria-label="Open Menu" role="button" tabindex="0">
-                            <div class="bar bar--top"></div> <!-- end .bar -->
-                            <div class="bar bar--middle"></div> <!-- end .bar -->
-                            <div class="bar bar--bottom"></div> <!-- end .bar -->
+                            <span class="bar bar--top"></span> <!-- end .bar -->
+                            <span class="bar bar--middle"></span> <!-- end .bar -->
+                            <span class="bar bar--bottom"></span> <!-- end .bar -->
                         </div> <!-- end .hamburger__button -->
-                        <menu>
-                            <li><a href="#about" class="icon-before--about">About</a></li>
-                            <li><a href="#projects" class="icon-before--projects">Projects</a></li>
-                            <li><a href="#contact" class="icon-before--contact">Contact</a></li>
-                            <li><a href="#vote" class="icon-before--vote--dark">Vote</a></li>
-                        </menu>
                     </label>
+                    <menu>
+                        <li><a href="#about" class="icon-before--about">About</a></li>
+                        <li><a href="#projects" class="icon-before--projects">Projects</a></li>
+                        <li><a href="#contact" class="icon-before--contact">Contact</a></li>
+                        <li><a href="#vote" class="icon-before--vote--dark">Vote</a></li>
+                    </menu>
                     <h1 class="JM-logo">
                         <a href="<?=$_SERVER['PHP_SELF']?>" tabindex="0">
                             <svg
                                 viewBox="0 0 67.733329 20.720588"
                                 version="1.1"
-                                id="JM-logo"
                                 xmlns="http://www.w3.org/2000/svg"
-                                xmlns:svg="http://www.w3.org/2000/svg"
                                 role="img"
                                 aria-label="<JM> logo.">
                                 <g
-                                    id="jm"
                                     class="JM-logo__jm-group"
                                     transform="matrix(0.09170011,0,0,0.09170313,-1.3426703,-13.027762)">
                                     <path
                                     style="fill:none;stroke:#1e90ff;stroke-width:32.6422;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:normal"
                                     d="m 294.51542,198.82659 c 57.75099,60.67636 -11.33134,218.87243 -108.91981,114.48594"
-                                    id="j"
                                     class="JM-logo__j" />
                                     <path
                                     style="display:inline;fill:none;stroke:#1e90ff;stroke-width:32.6111;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:fill markers stroke"
                                     d="m 170.47387,211.35078 c 63.60558,-4.66523 147.90373,-43.13442 222.04248,-52.86148 17.67003,-1.51476 19.84077,8.54425 20.47473,14.64474 -2.33237,15.89532 -45.81636,65.29105 -55.78886,86.49105 25.7831,-15.05333 79.32976,-72.26693 121.58501,-72.92684 0.28109,14.2211 -14.3575,58.96575 5.04779,62.14087 48.7994,-3.72238 118.17024,-24.07337 111.74624,9.77557 l -21.97146,93.09728"
-                                    id="m"
                                     class="JM-logo__m" />
                                     <path
                                     style="fill:none;fill-rule:evenodd;stroke:#1e90ff;stroke-width:6.47914;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;paint-order:fill markers stroke"
                                     d="m 570.09582,355.59595 c 29.53052,-0.84352 36.54359,-7.04816 52.53635,-11.11486 -36.10936,19.30926 -63.26858,28.34777 -52.53635,11.11486 z"
-                                    id="m-tail"
                                     class="JM-logo__m-tail" />
                                 </g>
                                 <path
                                     style="fill:none;stroke:#ffffff;stroke-width:2.71801;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
                                     d="M 10.124659,3.2366662 C 7.2729045,5.5425664 4.9996936,7.9702664 1.3588815,10.110051 c 2.901212,1.863808 3.9699434,2.916214 6.5220952,4.998185 0.3055824,0.249287 1.8691856,1.502017 2.0815626,2.143992"
-                                    id="lt"
                                     class="JM-logo__lt" />
                                 <path
                                     style="display:inline;fill:none;stroke:#ffffff;stroke-width:2.71801;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
                                     d="m 57.938471,3.2348672 c 3.125037,1.9370882 5.222618,4.7827552 8.43598,6.8733838 -3.213326,2.061802 -5.63678,4.574962 -8.43598,6.87341"
-                                    id="gt"
                                     class="JM-logo__gt" />
                             </svg>
                             <!-- Tokenize SVG for optimization -->
@@ -197,40 +189,32 @@
                         Hello, I am <span class="JM-logo"><svg
                                 viewBox="0 0 67.733329 20.720588"
                                 version="1.1"
-                                id="JM-logo"
                                 xmlns="http://www.w3.org/2000/svg"
-                                xmlns:svg="http://www.w3.org/2000/svg"
                                 role="img"
                                 aria-label="<JM>">
                                 <g
-                                    id="jm"
                                     class="JM-logo__jm-group"
                                     transform="matrix(0.09170011,0,0,0.09170313,-1.3426703,-13.027762)">
                                     <path
                                     style="fill:none;stroke:#1e90ff;stroke-width:32.6422;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:normal"
                                     d="m 294.51542,198.82659 c 57.75099,60.67636 -11.33134,218.87243 -108.91981,114.48594"
-                                    id="j"
                                     class="JM-logo__j" />
                                     <path
                                     style="display:inline;fill:none;stroke:#1e90ff;stroke-width:32.6111;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:fill markers stroke"
                                     d="m 170.47387,211.35078 c 63.60558,-4.66523 147.90373,-43.13442 222.04248,-52.86148 17.67003,-1.51476 19.84077,8.54425 20.47473,14.64474 -2.33237,15.89532 -45.81636,65.29105 -55.78886,86.49105 25.7831,-15.05333 79.32976,-72.26693 121.58501,-72.92684 0.28109,14.2211 -14.3575,58.96575 5.04779,62.14087 48.7994,-3.72238 118.17024,-24.07337 111.74624,9.77557 l -21.97146,93.09728"
-                                    id="m"
                                     class="JM-logo__m" />
                                     <path
                                     style="fill:none;fill-rule:evenodd;stroke:#1e90ff;stroke-width:6.47914;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;paint-order:fill markers stroke"
                                     d="m 570.09582,355.59595 c 29.53052,-0.84352 36.54359,-7.04816 52.53635,-11.11486 -36.10936,19.30926 -63.26858,28.34777 -52.53635,11.11486 z"
-                                    id="m-tail"
                                     class="JM-logo__m-tail" />
                                 </g>
                                 <path
                                     style="fill:none;stroke:#ffffff;stroke-width:2.71801;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
                                     d="M 10.124659,3.2366662 C 7.2729045,5.5425664 4.9996936,7.9702664 1.3588815,10.110051 c 2.901212,1.863808 3.9699434,2.916214 6.5220952,4.998185 0.3055824,0.249287 1.8691856,1.502017 2.0815626,2.143992"
-                                    id="lt"
                                     class="JM-logo__lt" />
                                 <path
                                     style="display:inline;fill:none;stroke:#ffffff;stroke-width:2.71801;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
                                     d="m 57.938471,3.2348672 c 3.125037,1.9370882 5.222618,4.7827552 8.43598,6.8733838 -3.213326,2.061802 -5.63678,4.574962 -8.43598,6.87341"
-                                    id="gt"
                                     class="JM-logo__gt" />
                             </svg></span>. 
                         I started programming at a young age, inspired in part by Flash (may it rest in peace) and HTML5 games.
@@ -267,7 +251,7 @@
                                             <source srcset="./assets/images/projects/languagebox/languagebox_Mobile_01.png" media="(width < 768px)" height="1592" width="896">
                                             <img class="projects__picture" src="./assets/images/projects/languagebox/languagebox_Mobile_01.png" alt="Example of the website LanguageBox." height="1592" width="896">
                                         </picture>
-                                    <h3>LanguageBox</h3>
+                                    <span class="projects__button__title">LanguageBox</span>
                                 </button>
                                 <dialog class="projects__desc languagebox-desc" id="languagebox-desc" popover>
                                     <button popovertarget="languagebox-desc" popovertargetaction="hide" class="projects__desc__hide" aria-label="Close">
@@ -297,7 +281,6 @@
                                             <img class="projects__picture" src="./assets/images/projects/languagebox/languagebox_Mobile_01.png" alt="Example of the website LanguageBox." height="1592" width="896">
                                         </picture>
                                         <picture>
-                                            <source srcset="" media="(width >= 1024px)">
                                             <source srcset="./assets/images/projects/languagebox/languagebox_Tablet_04.png" media="(width >= 768px)" height="696" width="1536">
                                             <source srcset="./assets/images/projects/languagebox/languagebox_Mobile_04.png" media="(width < 768px)" height="804" width="896">
                                             <img class="projects__picture" src="./assets/images/projects/languagebox/languagebox_Mobile_01.png" alt="Example of the website LanguageBox.">
@@ -340,7 +323,7 @@
                                             <img class="projects__picture" src="./assets/images/projects/droste/jmdev-Mobile_01.png" alt="Example of the website jeremymeyers.dev." height="1333" width="750">
                                         </picture>
                                     </noscript>
-                                    <h3>jeremymeyers<wbr>.dev</h3>
+                                    <span class="projects__button__title">jeremymeyers<wbr>.dev</span>
                                 </button>
                                 <dialog class="projects__desc JMdev-desc" id="JMdev-desc" popover>
                                     <button popovertarget="JMdev-desc" popovertargetaction="hide" class="projects__desc__hide" aria-label="Close">
@@ -398,24 +381,17 @@
                                             <img class="projects__picture" src="./assets/images/projects/droste/jmdev-Mobile_07.png" alt="Example of the website jeremymeyers.dev." height="1333" width="750">
                                         </picture>
                                         <picture>
-                                            <source srcset="" media="(width >= 1440px)">
                                             <source srcset="./assets/images/projects/droste/jmdev-Desktop_08.png" media="(width >= 1024px)" height="1152" width="2048">
-                                            <source srcset="" media="(width >= 768px)">
                                             <source srcset="./assets/images/projects/droste/jmdev-Mobile_08.png" media="(width < 768px)" height="1333" width="750">
                                             <img class="projects__picture" src="./assets/images/projects/droste/jmdev-Mobile_08.png" alt="Example of the website jeremymeyers.dev." height="1333" width="750">
                                         </picture>
                                         <picture>
-                                            <source srcset="" media="(width >= 1440px)">
                                             <source srcset="./assets/images/projects/droste/jmdev-Desktop_09.png" media="(width >= 1024px)" height="1152" width="2048">
-                                            <source srcset="" media="(width >= 768px)">
                                             <source srcset="./assets/images/projects/droste/jmdev-Mobile_09.png" media="(width < 768px)" height="1333" width="750">
                                             <img class="projects__picture" src="./assets/images/projects/droste/jmdev-Mobile_09.png" alt="Example of the website jeremymeyers.dev." height="1333" width="750">
                                         </picture>
                                         <picture>
-                                            <source srcset="" media="(width >= 1440px)">
                                             <source srcset="./assets/images/projects/droste/jmdev-Desktop_10.png" media="(width >= 1024px) and (width < 1440px)" height="1152" width="2048">
-                                            <source srcset="" media="(width >= 768px)">
-                                            <source srcset="" media="(width < 768px)">
                                             <img class="projects__picture" src="./assets/images/projects/droste/jmdev-Mobile_01.png" alt="Example of the website jeremymeyers.dev." height="1333" width="750">
                                         </picture>
                                     </div> <!-- end .picture-container -->
@@ -448,7 +424,7 @@
                                             <source srcset="./assets/images/projects/KCDR/KCDR_Mobile_01.png" media="(width < 768px)" height="1511" width="850">
                                             <img class="projects__picture" src="./assets/images/projects/KCDR/KCDR_Mobile_01.png" alt="Example of the website KCDR." height="1511" width="850">
                                         </picture>
-                                    <h3>Kansas City Doberman Rescue</h3>
+                                    <span class="projects__button__title">Kansas City Doberman Rescue</span>
                                 </button>
                                 <dialog class="projects__desc kcdr-desc" id="kcdr-desc" popover>
                                     <button popovertarget="kcdr-desc" popovertargetaction="hide" class="projects__desc__hide" aria-label="Close">
@@ -478,16 +454,12 @@
                                             <img class="projects__picture" src="./assets/images/projects/KCDR/KCDR_Mobile_01.png" alt="Example of the website KCDR." height="1592" width="850">
                                         </picture>
                                         <picture>
-                                            <source srcset="" media="(width >= 1440px)">
                                             <source srcset="./assets/images/projects/KCDR/KCDR_Desktop_04.png" media="(width >= 1024px)" height="1152" width="2048">
-                                            <source srcset="" media="(width >= 768px)">
                                             <source srcset="./assets/images/projects/KCDR/KCDR_Mobile_04.png" media="(width < 768px)" height="1511" width="850">
                                             <img class="projects__picture" src="./assets/images/projects/KCDR/KCDR_Mobile_01.png" alt="Example of the website KCDR.">
                                         </picture>
                                         <picture>
-                                            <source srcset="" media="(width >= 1440px)">
                                             <source srcset="./assets/images/projects/KCDR/KCDR_Desktop_05.png" media="(width >= 1024px)" height="158" width="2048">
-                                            <source srcset="" media="(width >= 768px)">
                                             <source srcset="./assets/images/projects/KCDR/KCDR_Mobile_05.png" media="(width < 768px)" height="1286" width="850">
                                             <img class="projects__picture" src="./assets/images/projects/KCDR/KCDR_Mobile_01.png" alt="Example of the website KCDR.">
                                         </picture>
@@ -604,7 +576,7 @@
                     <p class="question-box">Dogs or cats?</p>
 
                     <?php if (empty($_POST['choice'])) { ?>
-                        <form action="<?=$_SERVER["PHP_SELF"]?>#vote" method="POST">
+                        <form action="<?=$_SERVER['PHP_SELF']?>#vote" method="POST">
 
                             <div class="choices">
                                 <label tabindex="0">
@@ -631,7 +603,7 @@
                     <?php } else { ?>
                         <p>Thank you for participating! Your vote has been cast.</p>
                         <figure class="vote-graph">
-                            <hr class="plurality" style="--plurality: <?=(100 / $num_choices)?>%;">
+                            <div class="plurality" style="--plurality: <?=(100 / $num_choices)?>%;"></div> <!-- end .plurality -->
                             <?php 
                                 for ($i = 0; $i < $num_choices; $i++) {
                                     $tally = $tallies[$i];
@@ -657,40 +629,32 @@
                     <svg
                         viewBox="0 0 67.733329 20.720588"
                         version="1.1"
-                        id="JM-logo"
                         xmlns="http://www.w3.org/2000/svg"
-                        xmlns:svg="http://www.w3.org/2000/svg"
                         role="img"
                         aria-label="<JM> logo.">
                         <g
-                            id="jm"
                             class="JM-logo__jm-group"
                             transform="matrix(0.09170011,0,0,0.09170313,-1.3426703,-13.027762)">
                             <path
                             style="fill:none;stroke:#1e90ff;stroke-width:32.6422;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:normal"
                             d="m 294.51542,198.82659 c 57.75099,60.67636 -11.33134,218.87243 -108.91981,114.48594"
-                            id="j"
                             class="JM-logo__j" />
                             <path
                             style="display:inline;fill:none;stroke:#1e90ff;stroke-width:32.6111;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:fill markers stroke"
                             d="m 170.47387,211.35078 c 63.60558,-4.66523 147.90373,-43.13442 222.04248,-52.86148 17.67003,-1.51476 19.84077,8.54425 20.47473,14.64474 -2.33237,15.89532 -45.81636,65.29105 -55.78886,86.49105 25.7831,-15.05333 79.32976,-72.26693 121.58501,-72.92684 0.28109,14.2211 -14.3575,58.96575 5.04779,62.14087 48.7994,-3.72238 118.17024,-24.07337 111.74624,9.77557 l -21.97146,93.09728"
-                            id="m"
                             class="JM-logo__m" />
                             <path
                             style="fill:none;fill-rule:evenodd;stroke:#1e90ff;stroke-width:6.47914;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;paint-order:fill markers stroke"
                             d="m 570.09582,355.59595 c 29.53052,-0.84352 36.54359,-7.04816 52.53635,-11.11486 -36.10936,19.30926 -63.26858,28.34777 -52.53635,11.11486 z"
-                            id="m-tail"
                             class="JM-logo__m-tail" />
                         </g>
                         <path
                             style="fill:none;stroke:#ffffff;stroke-width:2.71801;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
                             d="M 10.124659,3.2366662 C 7.2729045,5.5425664 4.9996936,7.9702664 1.3588815,10.110051 c 2.901212,1.863808 3.9699434,2.916214 6.5220952,4.998185 0.3055824,0.249287 1.8691856,1.502017 2.0815626,2.143992"
-                            id="lt"
                             class="JM-logo__lt" />
                         <path
                             style="display:inline;fill:none;stroke:#ffffff;stroke-width:2.71801;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
                             d="m 57.938471,3.2348672 c 3.125037,1.9370882 5.222618,4.7827552 8.43598,6.8733838 -3.213326,2.061802 -5.63678,4.574962 -8.43598,6.87341"
-                            id="gt"
                             class="JM-logo__gt" />
                     </svg>
                 </div> <!-- end .JM-logo -->

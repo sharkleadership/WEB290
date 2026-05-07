@@ -200,6 +200,7 @@ menu {
   opacity: 0;
 
   position: absolute;
+  top: var(--header-height);
   right: 0;
 
   width: 100%;
@@ -226,7 +227,7 @@ menu {
   flex-direction: column;
 }
 
-.hamburger:checked ~ menu {
+:has(.hamburger:checked) ~ menu {
   opacity: 1;
   transform: scaleY(1);
 }
@@ -238,7 +239,10 @@ menu {
   aspect-ratio: 1;
 
   background-color: transparent;
-  border-radius: 0.5em 0 0;
+  border: none;
+  border-radius: 0.25em 0 0 0.25em;
+
+  display: block;
 
   transition: background-color 100ms;
 
@@ -253,6 +257,7 @@ menu {
 /* Buns */
 
 .hamburger__button .bar {
+  display: block;
   transform: translateY(0.125em);
   border-bottom: 0.125em solid var(--white);
   transition:
@@ -455,12 +460,15 @@ menu li:last-of-type:has(a:active) {
   margin-top: 0;
 }
 
-.projects__card .projects__button h3 {
+.projects__card .projects__button .projects__button__title {
+  display: block;
   position: absolute;
   bottom: 0;
   width: 100%;
   padding: 0.5em;
   font-size: 1rem;
+
+  font-family: "Electrolize", "Times New Roman", Times, serif;
 
   background-color: hsl(from var(--navy-blue) h s l / 0.5);
   color: var(--white);
