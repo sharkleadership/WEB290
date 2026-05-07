@@ -979,7 +979,7 @@ input[type="submit"]:active {
 	overflow: hidden;
 	width: 2rem;
 	padding: 0.25rem;
-	background-image: url("../assets/images/icons/arrow_upward.svg");
+	background-image: url("../assets/images/icons/material--arrow_upward.svg");
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	background-size: 75%;

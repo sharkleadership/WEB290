@@ -293,7 +293,7 @@
                                         </hgroup>
                                         <div class="links">
                                             <a href="https://github.com/sharkleadership/languagebox" title="Link to LanguageBox's GitHub repo."><img src="./assets/images/icons/github-mark-white.svg" alt="GitHub logo." class="nav__github"></a>
-                                            <a href="../languagebox" title="Link to LanguageBox"><img src="./assets/images/icons/open-link.svg" alt="Open link."></a>
+                                            <a href="../languagebox" title="Link to LanguageBox"><img src="./assets/images/icons/material--open-link.svg" alt="Open link."></a>
                                         </div> <!-- end .links -->
                                         <p>
                                             LanguageBox is a blog/learning resource dedicated to toki pona, the language of good. toki pona is a constructed language created in 2001 by Sonja Lang, known within the community as jan Sonja.
@@ -402,7 +402,7 @@
                                         </hgroup>
                                         <div class="links">
                                             <a href="https://github.com/sharkleadership/WEB290" title="Link to jeremymeyers.dev's GitHub repo."><img src="./assets/images/icons/github-mark-white.svg" alt="GitHub logo." class="nav__github"></a>
-                                            <button popovertarget="JMdev-desc" popovertargetaction="hide" title="Link to jeremymeyers.dev"><img src="./assets/images/icons/open-link.svg" alt="Open link."></button>
+                                            <button popovertarget="JMdev-desc" popovertargetaction="hide" title="Link to jeremymeyers.dev"><img src="./assets/images/icons/material--open-link.svg" alt="Open link."></button>
                                         </div> <!-- end .links -->
                                         <p>
                                             jeremymeyers.dev, affectionately called &lpar;by me&rpar; JMDev, is my portfolio, and coincidentally, the website you are on currently!
@@ -471,7 +471,7 @@
                                         </hgroup>
                                         <div class="links">
                                             <a href="https://github.com/sharkleadership/WEB122/tree/main/KCDR" title="Link to KCDR's GitHub repo."><img src="./assets/images/icons/github-mark-white.svg" alt="GitHub logo." class="nav__github"></a>
-                                            <a href="../WEB122/KCDR" title="Link to KCDR"><img src="./assets/images/icons/open-link.svg" alt="Open link."></a>
+                                            <a href="../WEB122/KCDR" title="Link to KCDR"><img src="./assets/images/icons/material--open-link.svg" alt="Open link."></a>
                                         </div> <!-- end .links -->
                                         <p>
                                             Kansas City Doberman Rescue is a volunteer organization that rescues Dobermans.
@@ -499,7 +499,7 @@
                                     </summary>
                                     <div class="links">
                                         <a href="https://github.com/sharkleadership/WEB122/tree/main/css-paged-media" title="Link to CSS Paged Media's GitHub repo."><img src="./assets/images/icons/github-mark-white.svg" alt="GitHub logo." class="nav__github"></a>
-                                        <a href="../WEB122/css-paged-media" title="Link to CSS Paged Media"><img src="./assets/images/icons/open-link.svg" alt="Open link."></a>
+                                        <a href="../WEB122/css-paged-media" title="Link to CSS Paged Media"><img src="./assets/images/icons/material--open-link.svg" alt="Open link."></a>
                                     </div> <!-- end .links -->
                                     <p>
                                         CSS Paged Media is a one-page website that details the CSS Paged Media module.
@@ -521,7 +521,7 @@
                                     </summary>
                                     <div class="links">
                                         <a href="https://github.com/sharkleadership/sharkleadership.github.io/tree/main/WEB114/final" title="Link to RPSLS's GitHub repo."><img src="./assets/images/icons/github-mark-white.svg" alt="GitHub logo." class="nav__github"></a>
-                                        <a href="../WEB114/final/final.html" title="Link to RPSLS"><img src="./assets/images/icons/open-link.svg" alt="Open link."></a>
+                                        <a href="../WEB114/final/final.html" title="Link to RPSLS"><img src="./assets/images/icons/material--open-link.svg" alt="Open link."></a>
                                     </div> <!-- end .links -->
                                     <p>
                                         RPSLS is an extension of the popular game Rock, Paper, Scissors written in JavaScript.
@@ -540,7 +540,7 @@
                                     </summary>
                                     <div class="links">
                                         <a href="https://www.figma.com/design/jDsscSunf6mLJ7C27mykco/HFP_F_Portal" title="Link to Portal: The Movie's Figma file."><img src="./assets/images/icons/logos--figma.svg" alt="Figma logo." class="nav__figma"></a>
-                                        <a href="https://www.figma.com/proto/jDsscSunf6mLJ7C27mykco/HFP_F_Portal" title="Link to Portal: The Movie as a prototype."><img src="./assets/images/icons/open-link.svg" alt="Open link."></a>
+                                        <a href="https://www.figma.com/proto/jDsscSunf6mLJ7C27mykco/HFP_F_Portal" title="Link to Portal: The Movie as a prototype."><img src="./assets/images/icons/material--open-link.svg" alt="Open link."></a>
                                     </div> <!-- end .links -->
                                     <p>
                                         Portal: The Movie is a high-fidelity Figma prototype of a promotional website for a &lpar;currently&rpar; fictional movie.
