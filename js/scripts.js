@@ -72,6 +72,18 @@ hamburgerButtons.forEach((button) => {
     });
 });
 
+// ACCESSIBILITY: form Enter button
+
+const labels = document.querySelectorAll(".choices label");
+
+labels.forEach((label) => {
+    label.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
+            label.click();
+        }
+    });
+});
+
 // Inception
 
 let inception = new Inception({
