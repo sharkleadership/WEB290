@@ -1,4 +1,4 @@
-// JM, 04/15/26
+// JM, 05/07/26
 "use strict";
 
 // Japanese greeting - Hero
@@ -7,7 +7,6 @@ const currentHour = function() {
     const hour = new Date().getHours();
     return hour;
 }
-setInterval(currentHour, 1000);
 currentHour();
 
 function japaneseGreeting() {
@@ -22,8 +21,6 @@ function japaneseGreeting() {
     } else {
         GREETINGS[2].classList.add("time");
     }
-
-    setInterval(japaneseGreeting, 1000);
 }
 japaneseGreeting();
 
