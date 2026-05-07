@@ -587,6 +587,16 @@ div:has(.droste-final-image) {
   max-width: 3rem;
   max-height: 3rem;
   aspect-ratio: 1;
+  background-color: var(--white);
+  background-image: radial-gradient(
+    circle,
+    hsl(from var(--white) h s calc(l - 5)) 0%,
+    hsl(from var(--white) h s calc(l - 10)) 50%,
+    var(--white) 100%
+  );
+  border: solid 0.125rem hsl(from var(--white) h s calc(l - 20));
+  border-radius: 0.5rem;
+  padding: 0.25rem;
 }
 
 .projects__desc hgroup {
@@ -658,7 +668,16 @@ div:has(.droste-final-image) {
   max-width: 3.5rem;
   max-height: 3.5rem;
   aspect-ratio: 1;
+  background-color: var(--white);
+  background-image: radial-gradient(
+    circle,
+    var(--white) 0%,
+    hsl(from var(--white) h s calc(l - 10)) 50%,
+    var(--white) 100%
+  );
+  border: solid 0.25rem hsl(from var(--white) h s calc(l - 20));
   border-radius: 0.25rem;
+  padding: 0.25rem;
 }
 
 .other-projects__proj details > summary {
@@ -768,6 +787,7 @@ button:disabled ~ a {
 }
 
 .contact footer p:target {
+  scroll-margin-top: var(--header-height);
   background-color: var(--yellow);
   color: var(--navy-blue);
 }
@@ -1349,6 +1369,11 @@ h2[class*="icon-before"]::before {
     justify-content: space-around;
     align-items: baseline;
     gap: 1em;
+    max-width: 90%;
+  }
+
+  .other-projects ul li {
+    flex: 1 1 0;
   }
 
   .other-projects__proj {
@@ -1371,7 +1396,20 @@ h2[class*="icon-before"]::before {
 
   .other-projects__proj details:not([open]) summary span {
     white-space: initial;
-    max-height: calc(1.4 * 3rem);
+    max-height: calc(1.4 * 2rem);
+    position: relative;
+    mix-blend-mode: hard-light;
+  }
+
+  .other-projects__proj details:not([open]) summary span::after {
+    position: absolute;
+    display: block;
+    content: " ";
+    height: 1.4rem;
+    width: 70%;
+    bottom: 0;
+    right: 0;
+    background-image: linear-gradient(to right, transparent, gray);
   }
 
   /* Contact */
