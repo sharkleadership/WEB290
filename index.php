@@ -293,7 +293,7 @@
                                         </hgroup>
                                         <div class="links">
                                             <a href="https://github.com/sharkleadership/languagebox" title="Link to LanguageBox's GitHub repo."><img src="./assets/images/icons/github-mark-white.svg" alt="GitHub logo." class="nav__github"></a>
-                                            <a href="../languagebox" title="Link to LanguageBox"><img src="./assets/images/icons/material--open-link.svg" alt="Open link."></a>
+                                            <a href="./languagebox" title="Link to LanguageBox"><img src="./assets/images/icons/material--open-link.svg" alt="Open link."></a>
                                         </div> <!-- end .links -->
                                         <p>
                                             LanguageBox is a blog/learning resource dedicated to toki pona, the language of good. toki pona is a constructed language created in 2001 by Sonja Lang, known within the community as jan Sonja.
@@ -471,7 +471,7 @@
                                         </hgroup>
                                         <div class="links">
                                             <a href="https://github.com/sharkleadership/WEB122/tree/main/KCDR" title="Link to KCDR's GitHub repo."><img src="./assets/images/icons/github-mark-white.svg" alt="GitHub logo." class="nav__github"></a>
-                                            <a href="../WEB122/KCDR" title="Link to KCDR"><img src="./assets/images/icons/material--open-link.svg" alt="Open link."></a>
+                                            <a href="./kcdr" title="Link to KCDR"><img src="./assets/images/icons/material--open-link.svg" alt="Open link."></a>
                                         </div> <!-- end .links -->
                                         <p>
                                             Kansas City Doberman Rescue is a volunteer organization that rescues Dobermans.
@@ -499,7 +499,7 @@
                                     </summary>
                                     <div class="links">
                                         <a href="https://github.com/sharkleadership/WEB122/tree/main/css-paged-media" title="Link to CSS Paged Media's GitHub repo."><img src="./assets/images/icons/github-mark-white.svg" alt="GitHub logo." class="nav__github"></a>
-                                        <a href="../WEB122/css-paged-media" title="Link to CSS Paged Media"><img src="./assets/images/icons/material--open-link.svg" alt="Open link."></a>
+                                        <a href="./css-paged-media" title="Link to CSS Paged Media"><img src="./assets/images/icons/material--open-link.svg" alt="Open link."></a>
                                     </div> <!-- end .links -->
                                     <p>
                                         CSS Paged Media is a one-page website that details the CSS Paged Media module.
@@ -521,7 +521,7 @@
                                     </summary>
                                     <div class="links">
                                         <a href="https://github.com/sharkleadership/sharkleadership.github.io/tree/main/WEB114/final" title="Link to RPSLS's GitHub repo."><img src="./assets/images/icons/github-mark-white.svg" alt="GitHub logo." class="nav__github"></a>
-                                        <a href="../WEB114/final/final.html" title="Link to RPSLS"><img src="./assets/images/icons/material--open-link.svg" alt="Open link."></a>
+                                        <a href="./rpsls" title="Link to RPSLS"><img src="./assets/images/icons/material--open-link.svg" alt="Open link."></a>
                                     </div> <!-- end .links -->
                                     <p>
                                         RPSLS is an extension of the popular game Rock, Paper, Scissors written in JavaScript.
