@@ -38,7 +38,7 @@
         // $tally_min = min($tallies['numbers']);
     }
 ?><!DOCTYPE html>
-<!-- JM, 05/05/2026 -->
+<!-- JM, 05/06/2026 -->
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -146,10 +146,10 @@
                     <label for="hamburger--header">
                         <input type="checkbox" id="hamburger--header" class="hamburger hamburger--header">
                         <div class="hamburger__button" title="Open Menu" role="button" tabindex="0">
-                            <div class="bar bar--top"></div>
-                            <div class="bar bar--middle"></div>
-                            <div class="bar bar--bottom"></div>
-                        </div>
+                            <div class="bar bar--top"></div> <!-- end .bar -->
+                            <div class="bar bar--middle"></div> <!-- end .bar -->
+                            <div class="bar bar--bottom"></div> <!-- end .bar -->
+                        </div> <!-- end .hamburger__button -->
                         <menu>
                             <li><a href="#about" class="icon-before--about">About</a></li>
                             <li><a href="#projects" class="icon-before--projects">Projects</a></li>
@@ -162,7 +162,7 @@
             <main id="top">
                 <section id="hero" class="hero full-bleed">
                     <div class="three-d-face">
-                        <div id="egghead-headset" class="p5-sketch-container"></div>
+                        <div id="egghead-headset" class="p5-sketch-container"></div> <!-- end #egghead-headset.p5-sketch-container -->
                         <noscript>
                             <picture>
                                 <source srcset="./assets/images/egghead.webp" type="image/webp">
@@ -170,7 +170,7 @@
                                 <img src="./assets/images/egghead.png" alt='An image of a 3D Model of an egghead wearing a VR headset.'>
                             </picture>
                         </noscript>
-                    </div>
+                    </div> <!-- end .three-d-face -->
                     <h2>
                         <span class="salutation__window">
                             <span class="salutation__glass">
@@ -233,7 +233,7 @@
                     </p>
                     <div class="media">
                         <div class="rubiks-cube-container">
-                            <div id="rubiks-cube" class="p5-sketch-container" title="Photo of a Rubik's Cube spinning."></div>
+                            <div id="rubiks-cube" class="p5-sketch-container" title="Photo of a Rubik's Cube spinning."></div> <!-- end #rubiks-cube.p5-sketch-container -->
                             <noscript>
                                 <picture>
                                     <source srcset="./assets/images/rubiks-turn.webp" type="image/webp">
@@ -241,11 +241,11 @@
                                     <img src="./assets/images/rubiks-turn.gif" alt="Photo of a Rubik's Cube spinning.">
                                 </picture>
                             </noscript>
-                        </div>
+                        </div> <!-- end .rubiks-cube-container -->
                         <p>
                             As I grew, I continued learning and creating projects using basic HTML and JavaScript. Fast forward to the present, I am a student of Web Development & Digital Media!
                         </p>
-                    </div>
+                    </div> <!-- end .media -->
                     <p>
                         In junction with programming languages, I also enjoy learning about human languages and linguistics and solving puzzles such as Rubik's Cubes.
                     </p>
@@ -298,7 +298,7 @@
                                             <source srcset="./assets/images/projects/languagebox/languagebox_Mobile_04.png" media="(width < 768px)" height="804" width="896">
                                             <img class="projects__picture" src="./assets/images/projects/languagebox/languagebox_Mobile_01.png" alt="Example of the website LanguageBox.">
                                         </picture>
-                                    </div>
+                                    </div> <!-- end .picture-container -->
                                     <div class="info">
                                         <hgroup>
                                             <img src="./assets/images/projects/languagebox-logo.png" alt="LanguageBox logo." class="project-logo--languagebox">
@@ -307,7 +307,7 @@
                                         <div class="links">
                                             <a href="https://github.com/sharkleadership/languagebox" title="Link to LanguageBox's GitHub repo."><img src="./assets/images/icons/github-mark-white.svg" alt="GitHub logo." class="nav__github"></a>
                                             <a href="../languagebox" title="Link to LanguageBox"><img src="./assets/images/icons/open-link.svg" alt="Open link."></a>
-                                        </div> <!-- Semantic container, <nav>? -->
+                                        </div> <!-- end .links -->
                                         <p>
                                             LanguageBox is a blog/learning resource dedicated to toki pona, the language of good. toki pona is a constructed language created in 2001 by Sonja Lang, known within the community as jan Sonja.
                                         </p>
@@ -317,7 +317,7 @@
                                         <p>
                                             This project was created as my final project in WEB 172 - WordPress I.
                                         </p>
-                                    </div>
+                                    </div> <!-- end .info -->
                                 </dialog>
                             </figure>
                         </li>
@@ -325,8 +325,8 @@
                             <figure class="projects__card">
                                 <button class="projects__button" popovertarget="JMdev-desc">
                                     <div id="JMdev-droste-container" class="projects__picture--droste">
-                                        <div class="disable-iframe-clicks"></div>
-                                    </div>
+                                        <div class="disable-iframe-clicks"></div> <!-- end .disable-iframe-clicks -->
+                                    </div> <!-- end #JM-droste-container.projects__picture--droste -->
                                     <noscript>
                                         <picture>
                                             <source srcset="./assets/images/" media="(width >= 1440px)" height="1620" width="2880">
@@ -371,7 +371,7 @@
                                             <source srcset="./assets/images/projects/languagebox/languagebox_Mobile_04.png" media="(width < 768px)" height="804" width="896">
                                             <img class="projects__picture" src="./assets/images/projects/languagebox/languagebox_Mobile_01.png" alt="Example of the website LanguageBox.">
                                         </picture>
-                                    </div>
+                                    </div> <!-- end .picture-container -->
                                     <div class="info">
                                         <hgroup>
                                             <img src="./assets/images/JM-tag-logo.svg" alt="<JM> logo." class="project-logo--JM">
@@ -380,14 +380,14 @@
                                         <div class="links">
                                             <a href="https://github.com/sharkleadership/WEB290" title="Link to jeremymeyers.dev's GitHub repo."><img src="./assets/images/icons/github-mark-white.svg" alt="GitHub logo." class="nav__github"></a>
                                             <button popovertarget="JMdev-desc" popovertargetaction="hide" title="Link to jeremymeyers.dev"><img src="./assets/images/icons/open-link.svg" alt="Open link."></button>
-                                        </div> <!-- Semantic container, <nav>? -->
+                                        </div> <!-- end .links -->
                                         <p>
                                             jeremymeyers.dev, affectionately called &lpar;by me&rpar; JMDev, is my portfolio, and coincidentally, the website you are on currently!
                                         </p>
                                         <p>
                                             Originally hobbled together over the course of my scholarship, JMDev has now been redesigned as a semester-long project for my capstone class &lpar;WEB 290&rpar;.
                                         </p>
-                                    </div>
+                                    </div> <!-- end .info -->
                                 </dialog>
                             </figure>
                         </li>
@@ -444,7 +444,7 @@
                                             <source srcset="./assets/images/projects/KCDR/KCDR_Mobile_05.png" media="(width < 768px)" height="1286" width="850">
                                             <img class="projects__picture" src="./assets/images/projects/KCDR/KCDR_Mobile_01.png" alt="Example of the website KCDR.">
                                         </picture>
-                                    </div>
+                                    </div> <!-- end .picture-container -->
                                     <div class="info">
                                         <hgroup>
                                             <img src="./assets/images/projects/KCDR-logo.svg" alt="KCDR (redesigned) logo." class="project-logo--KCDR">
@@ -453,7 +453,7 @@
                                         <div class="links">
                                             <a href="https://github.com/sharkleadership/WEB122/tree/main/KCDR" title="Link to KCDR's GitHub repo."><img src="./assets/images/icons/github-mark-white.svg" alt="GitHub logo." class="nav__github"></a>
                                             <a href="../WEB122/KCDR" title="Link to KCDR"><img src="./assets/images/icons/open-link.svg" alt="Open link."></a>
-                                        </div> <!-- Semantic container, <nav>? -->
+                                        </div> <!-- end .links -->
                                         <p>
                                             Kansas City Doberman Rescue is a volunteer organization that rescues Dobermans.
                                         </p>
@@ -463,7 +463,7 @@
                                         <p>
                                             This project was created as my final project in WEB 122 – CSS Techniques and Projects.
                                         </p>
-                                    </div>
+                                    </div> <!-- end .info -->
                                 </dialog>
                             </figure>
                         </li>
@@ -481,7 +481,7 @@
                                     <div class="links">
                                         <a href="https://github.com/sharkleadership/WEB122/tree/main/css-paged-media" title="Link to CSS Paged Media's GitHub repo."><img src="./assets/images/icons/github-mark-white.svg" alt="GitHub logo." class="nav__github"></a>
                                         <a href="../WEB122/css-paged-media" title="Link to CSS Paged Media"><img src="./assets/images/icons/open-link.svg" alt="Open link."></a>
-                                    </div>
+                                    </div> <!-- end .links -->
                                     <p>
                                         CSS Paged Media is a one-page website that details the CSS Paged Media module.
                                     </p>
@@ -503,7 +503,7 @@
                                     <div class="links">
                                         <a href="https://github.com/sharkleadership/sharkleadership.github.io/tree/main/WEB114/final" title="Link to RPSLS's GitHub repo."><img src="./assets/images/icons/github-mark-white.svg" alt="GitHub logo." class="nav__github"></a>
                                         <a href="../WEB114/final/final.html" title="Link to RPSLS"><img src="./assets/images/icons/open-link.svg" alt="Open link."></a>
-                                    </div>
+                                    </div> <!-- end .links -->
                                     <p>
                                         RPSLS is an extension of the popular game Rock, Paper, Scissors written in JavaScript.
                                     </p>
@@ -530,7 +530,6 @@
                         </ul>
                     </section>
                 </section>
-                
                 <section id="contact" class="contact">
                     <h2 class="icon-before--contact">Contact</h2>
                     <p>
@@ -588,7 +587,7 @@
                                 style="--tally: <?=(($tally['tally'] / $tally_sum) * 100)?>%;" 
                                 data-choice="<?=$tally['choice']?>" 
                                 data-tally="<?=$tally['tally']?>">
-                                </div>
+                                </div> <!-- end .vote-graph__bar -->
                             <?php } ?>
                         </figure>
                     <?php } ?>
@@ -633,7 +632,7 @@
                                 d="m 57.938471,3.2348672 c 3.125037,1.9370882 5.222618,4.7827552 8.43598,6.8733838 -3.213326,2.061802 -5.63678,4.574962 -8.43598,6.87341"
                                 id="gt"
                                 class="JM-logo__gt" />
-                        </svg>
+                </div> <!-- end .JM-logo -->
                     </div>
                     <a href="#top" class="back-to-top">Back to Top</a>
                 </nav>
