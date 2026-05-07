@@ -603,21 +603,24 @@
                     <?php } else { ?>
                         <p>Thank you for participating! Your vote has been cast.</p>
                         <figure class="vote-graph">
-                            <div class="plurality" style="--plurality: <?=(100 / $num_choices)?>%;"></div> <!-- end .plurality -->
-                            <?php 
-                                for ($i = 0; $i < $num_choices; $i++) {
-                                    $tally = $tallies[$i];
-                            ?>
-                                <div class="vote-graph__bar<?= ($tally['tally'] == $tally_max) ? ' winning' : '' ?><?= ($i + 1 == $user_choice) ? ' user-choice' :  '' ?>" 
-                                style="--tally: <?=(($tally['tally'] / $tally_sum) * 100)?>%;" 
-                                data-choice="<?=$tally['choice']?>" 
-                                data-tally="<?=$tally['tally']?>">
-                                </div> <!-- end .vote-graph__bar -->
-                            <?php } ?>
-                            <figcaption>
+                            <div class="vote-graph__graph">
+                                <div class="plurality" data-majority="<?=round((100 / $num_choices), 2)?>" style="--plurality: <?=round((100 / $num_choices), 2)?>%;"></div> <!-- end .plurality -->
+                                <?php
+                                    for ($i = 0; $i < $num_choices; $i++) {
+                                        $tally = $tallies[$i];
+                                ?>
+                                    <div class="vote-graph__bar<?= ($tally['tally'] == $tally_max) ? ' winning' : '' ?><?= ($i + 1 == $user_choice) ? ' user-choice' :  '' ?>"
+                                    style="--tally: <?=(($tally['tally'] / $tally_sum) * 100)?>%;"
+                                    data-choice="<?=$tally['choice']?>"
+                                    data-tally="<?=$tally['tally']?>">
+                                    </div> <!-- end .vote-graph__bar -->
+                                <?php } ?>
+                                
+                            </div>
+                            <figcaption class="vote-graph__legend">
                                 <ul>
-                                    <li><div class="vote-graph__legend winning"></div> <!-- end .vote-graph__legend --> - Leading</li>
-                                    <li><div class="vote-graph__legend user-choice"></div> <!-- end .vote-graph__legend --> - Your Choice</li>
+                                    <li><div class="vote-graph__legend__color winning"></div> <!-- end .vote-graph__legend__color --> - Leading</li>
+                                    <li><div class="vote-graph__legend__color user-choice"></div> <!-- end .vote-graph__legend__color --> - Your Choice</li>
                                 </ul>
                             </figcaption>
                         </figure>

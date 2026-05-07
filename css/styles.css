@@ -846,7 +846,7 @@ input[type="submit"]:active {
 	color: var(--navy-blue);
 }
 
-.vote-graph {
+.vote-graph__graph {
 	display: flex;
 	justify-content: space-evenly;
 	align-items: flex-end;
@@ -890,6 +890,7 @@ input[type="submit"]:active {
 	content: attr(data-choice);
 	display: block;
 	position: absolute;
+	z-index: 1000;
 	top: 0;
 	transform: translateY(-2.5rem) rotate(-50deg);
 }
@@ -898,13 +899,14 @@ input[type="submit"]:active {
 	content: attr(data-tally);
 	display: block;
 	position: absolute;
+	z-index: 1000;
 	bottom: 0;
 	transform: translateY(1.5rem);
 	width: 100%;
 	text-align: center;
 }
 
-.vote-graph .plurality {
+.vote-graph__graph .plurality {
 	position: absolute;
 	z-index: 100;
 	top: var(--plurality);
@@ -913,11 +915,29 @@ input[type="submit"]:active {
 	border: dashed 0.0075em hsl(from var(--white) h s l / 0.5);
 }
 
+.vote-graph__graph .plurality::before {
+	content: attr(data-majority);
+	position: absolute;
+	padding: 0.125rem 0.25rem;
+	transform: translateX(0.25rem) translateY(-50%);
+	background-color: hsl(from var(--dodgerblue) h calc(s - 70) l);
+	border-radius: 0.5rem;
+	font-family: "Ubuntu", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 0.9rem;
+	color: var(--navy-blue);
+}
+
 .vote-graph__legend {
+	margin: 2rem;
+}
+
+.vote-graph__legend ul {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	gap: 1em;
+	padding: 0;
+	margin: 0;
 	list-style-type: none;
 }
 
