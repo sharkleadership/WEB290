@@ -57,7 +57,7 @@
 
         <link rel="stylesheet" href="./css/styles.css">
         <script src="./js/inception.js"></script>
-        <script src="./js/p5.min.js"></script>
+        <script src="./js/p5.min.js" class="p5-script"></script>
 
         <script type="application/ld+json">
             {
@@ -93,7 +93,7 @@
         </script>
 
         <script src="./js/scripts.js" defer></script>
-        <script src="./js/sketches.js" defer></script>
+        <script src="./js/sketches.js" class="p5-script" defer></script>
     </head>
     <body>
         <div class="wrapper">
