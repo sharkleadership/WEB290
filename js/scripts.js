@@ -99,16 +99,15 @@ inception.onload = function() {
 
 // Header height
 
-if (inception.numParentsUntilTopWindow === 0) {
-    const header = document.querySelector('.header');
-    const root = document.documentElement;
+const header = document.querySelector('.header');
+const root = document.documentElement;
 
-    const updateHeaderHeight = () => {
-        const height = header.offsetHeight;
-        root.style.setProperty('--header-height', `${height}px`);
-    };
+const updateHeaderHeight = () => {
+    const height = header.offsetHeight;
+    root.style.setProperty('--header-height', `${height}px`);
+};
 
+if (header) {
     window.addEventListener('resize', updateHeaderHeight);
-
     updateHeaderHeight();
 }
